@@ -54,6 +54,7 @@
             font-size: 0.9rem; /* Font size reduced */
             font-weight: 700;
             color: #2c3e50;
+            white-space: nowrap; /* Prevent line break */
         }
 
         /* Hero Image Styles */
@@ -86,6 +87,7 @@
             text-align: center;
             text-shadow: 1px 1px 3px #000, -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000; /* Black outline */
             z-index: 1;
+            position: relative;
         }
 
         /* Table of Contents Section */
@@ -100,6 +102,11 @@
             margin-bottom: 1.5rem;
             text-align: center;
             font-weight: 900;
+        }
+        
+        .toc-section a {
+            text-decoration: none;
+            color: inherit;
         }
 
         .article-card {
@@ -221,7 +228,7 @@
     <!-- Table of Contents -->
     <section class="toc-section">
         <h2>주요 기사</h2>
-        <a href="#article1" style="text-decoration:none; color:inherit;">
+        <a href="#article1">
             <div class="article-card">
                 <img src="images/poster1.jpg" alt="총력투쟁 포스터" class="article-thumbnail">
                 <div class="article-content">
@@ -231,9 +238,9 @@
             </div>
         </a>
         
-        <a href="#article2" style="text-decoration:none; color:inherit;">
+        <a href="#article2">
             <div class="article-card">
-                 <img src="https://placehold.co/90x90/2c3e50/ffffff?text=건강권" alt="근골격계 조사 이미지" class="article-thumbnail">
+                 <img src="https://placehold.co/90x90/e74c3c/ffffff?text=건강권" alt="근골격계 조사 이미지" class="article-thumbnail">
                 <div class="article-content">
                     <h3>'골병'은 운명이 아닙니다</h3>
                     <p>근골격계 위험요인조사, 제대로 알고 우리의 건강권을 쟁취합시다.</p>
@@ -241,7 +248,7 @@
             </div>
         </a>
         
-        <a href="#article3" style="text-decoration:none; color:inherit;">
+        <a href="#article3">
             <div class="article-card">
                  <img src="https://placehold.co/90x90/ffc107/ffffff?text=조합원" alt="4.3 평화기행 사진" class="article-thumbnail">
                 <div class="article-content">
@@ -251,7 +258,7 @@
             </div>
         </a>
         
-        <a href="#article4" style="text-decoration:none; color:inherit;">
+        <a href="#article4">
             <div class="article-card">
                 <img src="https://placehold.co/90x90/00529b/ffffff?text=안전" alt="안전 관련 이미지" class="article-thumbnail">
                 <div class="article-content">
@@ -304,5 +311,4 @@
 
 </body>
 </html>
-
 
