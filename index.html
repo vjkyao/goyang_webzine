@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양고속지부 웹진 | 창간준비호</title>
+    <style>
+        /* Basic Reset and Font */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.7; color: #333; background-color: #f4f6f8;
+        }
+        /* Header Styles */
+        .header {
+            background: #ffffff; padding: 0.8rem 1rem; text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0;
+            z-index: 1000; border-bottom: 3px solid #00529b;
+        }
+        .header a {
+            text-decoration: none; color: inherit; display: flex;
+            align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .header-logo { max-width: 150px; height: auto; }
+        .header h1 {
+            font-size: 0.9rem; font-weight: 700; color: #2c3e50; white-space: nowrap;
+        }
+        /* Hero Image Styles */
+        .hero-image {
+            width: 100%; height: 300px; background-size: cover; background-position: center;
+            display: flex; align-items: flex-start; justify-content: center;
+            padding: 1.5rem; color: white; position: relative;
+        }
+        .hero-image::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        .hero-image h2 {
+            font-size: 1.5rem; font-weight: 900; text-align: center;
+            text-shadow: 1px 1px 3px #000, -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000;
+            z-index: 1; position: relative;
+        }
+        /* Table of Contents Section */
+        .toc-section { padding: 2rem 1rem; background-color: #ffffff; }
+        .toc-section h2 {
+            font-size: 1.5rem; color: #1a3a5f; margin-bottom: 1.5rem;
+            text-align: center; font-weight: 900;
+        }
+        .toc-section a { text-decoration: none; color: inherit; }
+        .article-card {
+            display: flex; gap: 1rem; padding: 1rem; margin-bottom: 1rem;
+            background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;
+            border-left: 5px solid #00529b;
+        }
+        .article-card:hover {
+            transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+        .article-thumbnail {
+            width: 90px; height: 90px; border-radius: 4px; object-fit: cover; flex-shrink: 0;
+        }
+        .article-content { flex: 1; }
+        .article-content h3 {
+            font-size: 1.1rem; font-weight: 700; color: #2c3e50; margin-bottom: 0.3rem; line-height: 1.4;
+        }
+        .article-content p {
+            font-size: 0.9rem; color: #555; line-height: 1.5; display: -webkit-box;
+            -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        /* Article Section Styles */
+        .article-section {
+            padding: 2rem 1rem; margin-top: 1rem; background-color: white;
+        }
+        .article-section h2 {
+            font-size: 1.6rem; color: #1a3a5f; margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem; border-bottom: 3px solid #ffc107; font-weight: 900;
+        }
+        .article-section p {
+            font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; color: #333; text-align: justify;
+        }
+        .article-section img.full-width {
+            width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        /* Footer Styles */
+        .footer {
+            background: #2c3e50; color: white; text-align: center;
+            padding: 2.5rem 1rem; margin-top: 2rem;
+        }
+        .footer h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .footer p { font-size: 0.9rem; opacity: 0.8; }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#top">
+            <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">
+            <h1>고양고속지부 웹진 | 창간준비호</h1>
+        </a>
+    </header>
+
+    <!-- Hero Image Section -->
+    <section class="hero-image" style="background-image: url('images/poster3.png');">
+        <h2>되풀이 되는 비극<br>이제는 멈춰야 합니다</h2>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <h2>주요 기사</h2>
+        <a href="#article1">
+            <div class="article-card">
+                <img src="images/poster1.jpg" alt="총력투쟁 포스터" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>9월 17일, 우리의 운명을 바꾸는 날!</h3>
+                    <p>총력투쟁의 선봉에 함께 섭시다! 우리의 권리는 투쟁 없이 주어지지 않습니다.</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="./article2.html">
+            <div class="article-card">
+                 <img src="https://placehold.co/90x90/e74c3c/ffffff?text=건강권" alt="근골격계 조사 이미지" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>'골병'은 운명이 아닙니다</h3>
+                    <p>근골격계 위험요인조사, 제대로 알고 우리의 건강권을 쟁취합시다.</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="./article3.html">
+            <div class="article-card">
+                 <img src="https://placehold.co/90x90/ffc107/ffffff?text=조합원" alt="4.3 평화기행 사진" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>역사를 기억하고, 우리의 이야기를 쓰다</h3>
+                    <p>4.3 평화기행과 함께 조합원들의 목소리를 담는 '조합원 칼럼'이 신설되었습니다.</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="./article4.html">
+            <div class="article-card">
+                <img src="https://placehold.co/90x90/00529b/ffffff?text=안전" alt="안전 관련 이미지" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>안전불감증과 책임 있는 경영 요구</h3>
+                    <p>반복되는 안전사고, 구조적 문제 해결을 위해 지부는 단호히 경고하고 투쟁합니다.</p>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Full Article Section 1 (Combined with Index) -->
+    <section class="article-section" id="article1">
+        <h2>9월 17일, 우리의 운명을 바꾸는 날 - 총력투쟁의 선봉에 함께 섭시다!</h2>
+        <p>"기회는 열렸다, 바꾸자 공공기관!" 이 구호가 대한민국 심장부, 서울 세종대로에 울려 퍼질 날이 얼마 남지 않았습니다. 오는 9월 17일 수요일 오후 3시(집결 2시 30분), 우리는 숭례문 앞에 모여 불의한 정권의 폭주를 멈추고 노동의 가치가 존중받는 세상을 향한 총력투쟁에 돌입합니다.</p>
+        <img src="images/poster1.jpg" alt="9.17 총력투쟁 포스터" class="full-width">
+        <p>이번 9.17 공공기관 총파업-총력투쟁은 단순히 하나의 임금 협상이 아닙니다. 이는 ▲살인적인 총인건비제 전면 개선 ▲노동기본권 보장을 위한 노정교섭 법제화 ▲인력 확충으로 안전한 일터 쟁취 ▲직무성과급제 저지와 반노동 혁신가이드라인 폐기 ▲비정규직 차별 철폐 등 우리의 생존과 미래가 걸린 핵심 요구를 내건 역사적인 투쟁입니다.</p>
+        <img src="images/poster2.png" alt="9.17 총력투쟁 포스터 2" class="full-width">
+        <p>철도노조는 이번 총력투쟁에 2천 조합원 참가를 목표로 하고 있습니다. 각 지부 대의원, 간부, 그리고 뜻을 함께하는 모든 조합원 동지들이 투쟁의 주역입니다. 행진 필참 조합원들은 지역 열차 예매 시 17시 이후 열차를 이용해주시기 바랍니다. 동지 여러분! 더 이상 물러설 곳이 없습니다. 우리의 권리는 투쟁 없이 주어지지 않습니다. 9월 17일, 우리의 단결된 힘으로 세상을 바꾸는 그 역사적인 현장에서 모두 함께합시다!</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <h3>전국철도노동조합 고양고속차량지부</h3>
+        <p>© 2025 Goyang High-speed Depot Branch. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
