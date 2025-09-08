@@ -16,36 +16,31 @@
             margin: 1.5rem 0;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border-radius: 8px;
-            overflow: hidden; /* 이미지 모서리 둥글게 */
+            overflow: hidden;
         }
         .article-image {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px; /* 이미지 자체도 둥글게 */
         }
         .image-text-overlay {
             position: absolute;
-            top: 50%;
+            top: 1rem; /* Position from the top */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%); /* Center horizontally */
+            width: 95%; /* Use almost full width to prevent wrapping */
             color: white;
-            font-size: 1.3rem; /* 글자 크기 조정 */
-            font-weight: 900; /* 글자 두껍게 */
+            font-size: 1.4rem;
+            font-weight: 900;
             text-align: center;
             line-height: 1.4;
-            /* 검은색 테두리 흰색 글자 */
             text-shadow:
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000,
-                -2px 0px 0 #000, /* 굵은 테두리 효과 */
-                2px 0px 0 #000,
-                0px -2px 0 #000,
-                0px 2px 0 #000;
+                -1.5px -1.5px 0 #000,  
+                 1.5px -1.5px 0 #000,
+                -1.5px  1.5px 0 #000,
+                 1.5px  1.5px 0 #000; /* Thicker outline */
             z-index: 10;
-            padding: 5px 10px; /* 텍스트 주변 여백 */
+            pointer-events: none; /* Prevent text from being selectable */
         }
         .back-to-top {
             display: block; text-align: center; margin-top: 2rem;
@@ -65,7 +60,7 @@
         
         <div class="image-wrapper">
             <img src="images/KTX_worker1.png" alt="힘든 업무를 폄하하는 노동자" class="article-image">
-            <div class="image-text-overlay">(굳이 이런것까지?)</div>
+            <div class="image-text-overlay" style="white-space: nowrap;">굳이 이런것까지?</div>
         </div>
 
         <p>실제로, 조사가 끝난 그해에 한 동료가 결국 근골격계 질환으로 요양을 받아야 하는 안타까운 일이 있었습니다. 이는 누구를 탓하자는 것이 아닙니다. 다만, 우리의 침묵이 어떤 결과로 이어질 수 있는지를 보여주는 소중한 교훈입니다.</p>
@@ -89,3 +84,4 @@
     </div>
 </body>
 </html>
+
