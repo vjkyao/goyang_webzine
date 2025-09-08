@@ -8,12 +8,44 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Pretendard', sans-serif; line-height: 1.7; color: #333; background-color: #f4f6f8; }
         .article-container { max-width: 800px; margin: 0 auto; background-color: white; padding: 1.5rem; }
-        /* .back-link { display: inline-block; margin-bottom: 2rem; color: #00529b; text-decoration: none; font-weight: 700; } */ /* 상단 링크 삭제 */
         h1 { font-size: 1.8rem; color: #1a3a5f; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #ffc107; }
         p { font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; text-align: justify; }
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden; /* 이미지 모서리 둥글게 */
+        }
         .article-image {
-            width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            display: block; /* 이미지 주변 텍스트 흐름 제어 */
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px; /* 이미지 자체도 둥글게 */
+        }
+        .image-text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.3rem; /* 글자 크기 조정 */
+            font-weight: 900; /* 글자 두껍게 */
+            text-align: center;
+            line-height: 1.4;
+            /* 검은색 테두리 흰색 글자 */
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000,
+                -2px 0px 0 #000, /* 굵은 테두리 효과 */
+                2px 0px 0 #000,
+                0px -2px 0 #000,
+                0px 2px 0 #000;
+            z-index: 10;
+            padding: 5px 10px; /* 텍스트 주변 여백 */
         }
         .back-to-top {
             display: block; text-align: center; margin-top: 2rem;
@@ -30,7 +62,12 @@
         <h2>지난 조사의 아쉬움, 그리고 우리가 얻은 교훈</h2>
         <p>지난 2023년, 우리 고양고속차량지부의 400개가 넘는 작업 공정 중, 노사 공동의 노력에도 불구하고 단 3건만이 공식적인 '유해요인 작업'으로 인정받았습니다.</p>
         <p>제조업 생산 라인보다 훨씬 더 부자연스러운 자세와 돌발적인 상황이 많은 우리 일터가, 정말 이토록 안전하다는 것일까요? 이는 결코 노사 담당자들의 탓이 아닙니다. 노조 집행부라 할지라도 현장의 모든 작업을 속속들이 알 수는 없습니다. 가장 큰 이유는 아마도, 정작 조사의 주인공인 우리 자신에게 있었을지 모릅니다. "이 정도는 참을만하다", "굳이 이런 것까지 말해야 하나"라는 생각으로, 혹은 매일 하는 일이라 무뎌져서, 우리의 진짜 고충을 제대로 전달하지 못한 결과일 수 있습니다.</p>
-        <img src="images/KTX_worker1.png" alt="힘든 업무를 폄하하는 노동자" class="article-image">
+        
+        <div class="image-wrapper">
+            <img src="images/KTX_worker1.png" alt="힘든 업무를 폄하하는 노동자" class="article-image">
+            <div class="image-text-overlay">(굳이 이런것까지?)</div>
+        </div>
+
         <p>실제로, 조사가 끝난 그해에 한 동료가 결국 근골격계 질환으로 요양을 받아야 하는 안타까운 일이 있었습니다. 이는 누구를 탓하자는 것이 아닙니다. 다만, 우리의 침묵이 어떤 결과로 이어질 수 있는지를 보여주는 소중한 교훈입니다.</p>
 
         <h2>'반복 작업' 중심 조사의 한계와 우리의 대응</h2>
@@ -39,7 +76,12 @@
         <h2>2025년, 이렇게 바꿉시다!</h2>
         <p>그래서 2025년 조사는 달라져야 합니다. 핵심은 <strong>'나의 가장 힘든 작업을 정확하게 알리는 것'</strong>입니다.</p>
         <p>조사자의 눈과 서류가 아닌, 당신의 몸이 가장 정확한 측정기입니다. 각자 자신의 업무 중 가장 힘들고 개선이 시급한 부담 작업 '한두 개'를 미리 정해, 이번 조사에서 반드시 정확하게 전달해야 합니다.</p>
-        <img src="images/KTX_worker2.png" alt="작업 평가 중인 안전관리자" class="article-image">
+        
+        <div class="image-wrapper">
+            <img src="images/KTX_worker2.png" alt="작업 평가 중인 안전관리자" class="article-image">
+            <div class="image-text-overlay">근골격계 위험작업의<br>정확한 전달 및 평가</div>
+        </div>
+
         <p>만약 조사 당일 해당 작업을 수행하지 않는다면, 그냥 넘어가지 마십시오. 미리 사진이나 동영상을 찍어두거나, 작업 일정을 조절해서라도 반드시 평가받을 수 있도록 해야 합니다. 이 모든 과정이 어렵거나 도움이 필요하다면, 주저하지 말고 노동조합 집행부에 알려주십시오. 조합은 동지들이 자신의 목소리를 내는 모든 과정을 함께하며 든든한 버팀목이 되겠습니다.</p>
         <p>오늘의 적극적인 참여가 내일의 '골병'을 막고, 동료들의 건강을 지키는 가장 확실한 투쟁입니다.</p>
 
@@ -47,4 +89,3 @@
     </div>
 </body>
 </html>
-
