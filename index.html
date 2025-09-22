@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고양고속지부 웹진 | 창간호</title>
+    <title>고양고속지부 웹진 | 전수교육특집</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -23,6 +23,11 @@
         .header-logo { max-width: 150px; height: auto; }
         .header h1 {
             font-size: 0.9rem; font-weight: 700; color: #2c3e50; white-space: nowrap;
+        }
+        .header h1 span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 0.25rem;
         }
         .hero-image {
             width: 100%; height: 300px; background-size: cover; background-position: center;
@@ -71,21 +76,48 @@
             font-size: 1.6rem; color: #1a3a5f; margin-bottom: 1.5rem;
             padding-bottom: 0.5rem; border-bottom: 3px solid #ffc107; font-weight: 900;
         }
+         .article-section .lead {
+             font-size: 1.1rem;
+             font-weight: 600;
+             color: #333;
+             margin-bottom: 2rem;
+             padding: 1rem;
+             background-color: #f8f9fa;
+             border-left: 5px solid #00529b;
+        }
         .article-section p {
             font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; color: #333; text-align: justify;
         }
-        .article-section img.placard {
+        .article-section img {
             width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin-top: 2rem; margin-bottom: 1rem;
         }
-        .article-section strong {
-            font-weight: 700;
-            color: #00529b;
+        .article-section .infographic {
+             background-color: #fff3cd;
+             border-radius: 8px;
+             padding: 1.5rem;
+             margin: 2rem 0;
+             border-left: 5px solid #ffc107;
+        }
+        .article-section .infographic h3 {
+             font-size: 1.4rem;
+             text-align: center;
+             margin-bottom: 1.5rem;
+             color: #856404;
+             font-weight: 700;
+        }
+        .article-section .infographic-item p:first-child {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #856404;
         }
         .back-to-top {
             display: block; text-align: center; margin-top: 2rem;
             padding: 0.8rem; background-color: #2c3e50; color: white;
             text-decoration: none; font-weight: 700; border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        .back-to-top:hover {
+            background-color: #1a3a5f;
         }
         .footer {
             background: #2c3e50; color: white; text-align: center;
@@ -99,20 +131,20 @@
     <header class="header">
         <a href="#top">
             <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">
-            <h1>고양고속지부 웹진 | 창간호</h1>
+            <h1>고양고속지부 웹진 |<span>전수교육특집</span></h1>
         </a>
     </header>
-    <section class="hero-image" style="background-image: url('images/poster3.png');">
-        <h2>되풀이 되는 비극<br>이제는 멈춰야 합니다</h2>
+    <section class="hero-image" style="background-image: url('images/hero_main.png');">
+        <h2>경쟁 신화의 종말<br>통합으로의 필연적 회귀</h2>
     </section>
     <section class="toc-section">
         <h2>주요 기사</h2>
         <a href="#article1">
             <div class="article-card">
-                <img src="images/poster1.jpg" alt="총력투쟁 포스터" class="article-thumbnail">
+                <img src="images/KTX_3.png" alt="KTX와 SRT 열차" class="article-thumbnail">
                 <div class="article-content">
-                    <h3>9월 17일, 우리의 운명을 바꾸는 날!</h3>
-                    <p>총력투쟁의 선봉에 함께 섭시다! 우리의 권리는 투쟁 없이 주어지지 않습니다.</p>
+                    <h3>[집중기획] 경쟁 신화의 종말, 통합으로의 회귀</h3>
+                    <p>세계 철도 정책은 왜 '통합'으로 돌아가고 있는가? 영국과 프랑스의 사례를 통해 KTX-SRT 분리 체제의 문제점을 심층 분석합니다.</p>
                 </div>
             </div>
         </a>
@@ -145,29 +177,49 @@
         </a>
     </section>
 
-    <!-- Full Article Section 1 (Combined with Index) -->
+    <!-- Full Article Section -->
     <section class="article-section" id="article1">
-        <h2>9월 17일, 우리의 운명을 바꾸는 날! 총력투쟁의 깃발 아래 하나로 모입시다!</h2>
-        <p>동지들, 마침내 결전의 날이 다가오고 있습니다. 우리의 생존과 미래를 건 9.17 공공기관 총파업-총력투쟁이 이제 열흘 앞으로 다가왔습니다. 이번 투쟁은 단순한 임금 협상을 넘어, 철도 현장의 안전과 공공성을 짓밟는 정부의 폭주를 멈춰 세우기 위한 우리 모두의 절박한 외침입니다.</p>
-        <p style="background:#fff3cd; padding:1rem; border-left:5px solid #ffc107; font-weight:bold;">총력투쟁의 카운트다운은 바로 우리, 고양고속차량지부의 현장에서 시작됩니다. 오는 9월 15일(월)과 16일(화) 양일간, 지부 지도부는 조합원 동지들을 직접 찾아가는 현장 순회에 나섭니다. 우리가 왜 싸워야 하는지, 무엇을 쟁취해야 하는지 가슴 뜨겁게 공유하고, 동지들의 생생한 목소리를 듣겠습니다. 이틀간의 현장 순회에 뜨거운 관심과 호응으로 함께해 주십시오. 우리의 결의가 하나로 모일 때, 9월 17일의 함성은 세상을 뒤흔들 것입니다.</p>
-        <p>우리가 숭례문 앞에서 외칠 5대 핵심 요구는 다음과 같습니다.</p>
+        <h2>경쟁 신화의 종말, 통합으로의 회귀</h2>
+        <p class="lead">KTX와 SRT로 분리된 한국 고속철도 운영 체제는 1990년대 영국에서 시작된 철도 민영화 모델에 뿌리를 두고 있다. '경쟁을 통한 효율화'라는 명분으로 추진된 이 모델은, 그러나 지난 30년간 세계 곳곳에서 심각한 부작용을 낳으며 실패로 판명났다. 이제 세계 철도 정책의 흐름은 다시 '통합'과 '공공성 강화'로 회귀하고 있다.</p>
 
-        <img src="images/placard_1.png" alt="총인건비제 전면개선" class="placard">
-        <p><strong>첫째, 모든 문제의 근원, '총인건비제'를 전면 개선해야 합니다.</strong> 정부는 예산 통제를 명분으로 각 기관의 인건비 총액을 묶어두는 총인건비제를 고수하고 있습니다. 하지만 이 족쇄야말로 현장의 신규 인력 충원을 막고, 안전 예산을 좀먹으며, 정규직과 비정규직의 갈등을 부추기는 모든 문제의 근원입니다. 2025년을 총인건비제 전면 개선의 첫 해로 만들어야 합니다.</p>
-
-        <img src="images/placard_2.png" alt="노정교섭 쟁취" class="placard">
-        <p><strong>둘째, '노정교섭'을 법제화하여 진짜 사장인 정부와 직접 대화해야 합니다.</strong> 국제노동기구(ILO)는 이미 한국 정부에 공공부문 노정교섭을 제도화하라고 권고한 바 있습니다. 실질적인 권한은 모두 정부가 쥔 채, 철도공사만 내세우는 기만적인 교섭 구조를 깨뜨려야 합니다. 국가가 사실상 사용자로서 정책을 주도한다면, 마땅히 노동자의 참여가 보장되어야 합니다.</p>
+        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a3a5f; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">영국의 눈물: 철도 민영화 30년의 대차대조표</h3>
+        <p>1993년 영국 정부는 영국국철(British Rail)을 100여 개 회사로 분할 매각하며 철도 민영화의 서막을 열었다. 정부가 약속했던 서비스 개선과 재정 절감은 신기루에 불과했다. 그 자리를 채운 것은 요금 폭등, 안전사고 급증, 그리고 막대한 국민 혈세 낭비였다.</p>
+        <img src="images/GBR.png" alt="대영철도(GBR) 로고">
+        <p>민간 운영사들은 단기 수익에 몰두하며 안전 투자를 외면했다. 그 결과는 대형 참사로 이어졌다. 서비스 품질은 저하되었고, 열차 지연 및 취소는 일상화되었다. '경쟁'은 오히려 비효율을 낳았다. 분리 운영으로 인한 시스템 중복, 유지보수 비효율 등 사회적 낭비는 매년 수천억 원에 달했다. 결국 2021년, 영국 정부는 사실상의 '재국유화'를 선언하며 새로운 국영 통합 기관 '대영철도(GBR)' 설립 계획을 발표했다. 30년간의 고통스러운 실험이 실패했음을 공식 인정한 것이다.</p>
         
-        <img src="images/placard_3.png" alt="인력충원 쟁취" class="placard">
-        <p><strong>셋째, 더 이상 죽을 수 없다! '인력 확충'으로 '안전한 일터'를 쟁취해야 합니다.</strong> 최근 5년간 공기업에서 발생한 산재 사망 누계 통계는 처참합니다. 특히 철도는 정부의 '혁신가이드라인'에 따라 수천 명의 인력 감축이 예고되어, 안전에 거대한 구멍이 뚫렸습니다. 지난 8월 청도 참사에서 또다시 동료를 잃은 우리는 압니다. 인력 감축은 곧 안전 관리 약화와 사고 발생으로 직결된다는 것을 말입니다.</p>
+        <img src="images/KTX_1.png" alt="선로를 달리는 KTX 열차">
+        <div class="infographic">
+            <h3>영국 철도 민영화 30년의 비극</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
+                <div class="infographic-item">
+                    <p>20%</p>
+                    <p style="font-weight: bold; margin-top: 0.5rem;">요금 폭등</p>
+                    <p style="font-size: 0.8rem; color: #555;">(민영화 이전 대비 실질 가격)</p>
+                </div>
+                <div class="infographic-item">
+                    <p>42<span style="font-size: 1.5rem;">명</span></p>
+                    <p style="font-weight: bold; margin-top: 0.5rem;">주요 참사 사망자</p>
+                    <p style="font-size: 0.8rem; color: #555;">(사우스홀, 패딩턴, 햇필드)</p>
+                </div>
+                <div class="infographic-item">
+                    <p>5.8<span style="font-size: 1.5rem;">조원</span></p>
+                    <p style="font-weight: bold; margin-top: 0.5rem;">긴급 구제금융</p>
+                    <p style="font-size: 0.8rem; color: #555;">(2020년, 민간기업 파산 방지)</p>
+                </div>
+            </div>
+        </div>
         
-        <img src="images/placard_4.png" alt="직무성과급제 저지" class="placard">
-        <p><strong>넷째, 공공성을 파괴하는 '직무성과급제'와 '혁신가이드라인'을 폐기해야 합니다.</strong> 효율성과 성과라는 미명 아래 도입된 직무성과급제와 혁신가이드라인은, 현장 안전과 공공의 이익보다 경영평가 점수를 우선시하는 왜곡된 구조를 낳았습니다. 국민의 안전과 직결된 우리의 업무는 결코 점수로 재단될 수 없습니다.</p>
+        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a3a5f; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">프랑스의 실용적 유턴: 실패를 인정하고 통합으로</h3>
+        <p>프랑스는 1997년 철도공사(SNCF)를 열차 운행과 선로 관리로 분리하는 상하분리 정책을 도입했다. 소유권은 국가가 유지했지만, 조직 분리는 비효율과 막대한 재정 적자를 낳았다. 특히 선로 관리 조직에 떠넘겨진 부채는 프랑스 철도 전체의 족쇄가 되었다.</p>
+        <p>이에 프랑스 정부는 과감한 결단을 내렸다. 2014년 분리된 조직을 다시 SNCF로 통합하는 법안을 통과시켰고, 2018년 에마뉘엘 마크롱 대통령은 한 걸음 더 나아갔다. SNCF의 누적 부채 중 350억 유로(약 50조 원)를 국가가 직접 떠안는 파격적인 결정을 내린 것이다. 이는 철도의 공공성을 유지하기 위해 국가의 책임 있는 역할과 과감한 재정 투입이 필수적이라는 교훈을 명확히 보여준다.</p>
+        <img src="images/France.png" alt="프랑스 TGV 열차와 에마뉘엘 마크롱 대통령">
+        <p style="text-align: center; font-size: 0.9rem; font-weight: 600; background-color: #f0f4f8; padding: 1rem; border-radius: 8px;">"프랑스 정부는 철도를 국가 기간산업으로 규정하고, SNCF의 막대한 부채를 국가가 책임지며 통합의 발판을 마련했다."</p>
         
-        <img src="images/placard_5.png" alt="비정규직 정규직화" class="placard">
-        <p><strong>다섯째, '비정규직 차별'을 철폐하고 모두가 존중받는 일터를 만들어야 합니다.</strong> 정부는 '정규직 전환 완료'를 선전하지만, 자회사 전환 등의 꼼수로 현장의 차별은 여전합니다. 위험의 외주화로 고통받는 비정규직 동지들의 손을 잡고, 차별 없는 일터를 향한 투쟁에 함께해야 합니다.</p>
-
-        <p>동지 여러분! 우리의 요구는 지극히 상식적이고 정당합니다. <strong>9월 17일 수요일 오후 3시, 숭례문 앞 세종대로에서</strong> 우리의 단결된 힘을 보여줍시다. 한 사람의 열 걸음보다 열 사람의 한 걸음이 세상을 바꿉니다. 현장에서, 그리고 투쟁의 대오에서 함께합시다!</p>
+        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a3a5f; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">역사적 흐름을 역행하는 KTX-SRT 분리</h3>
+        <p>영국과 프랑스의 사례는 '분할과 경쟁'의 시대가 저물고 '통합과 공공성'의 시대가 오고 있음을 보여준다. 그러나 한국의 KTX-SRT 분리 체제는 이러한 세계사적 교훈을 역행하는 결정이다. 2016년 도입된 이 체제는 실패한 영국 모델의 변형된 복제품에 가깝다.</p>
+        <p>정부는 SR의 '10% 저렴한 요금'을 경쟁의 효과로 내세우지만, 이는 불공정한 구조 속에서 탄생한 착시 효과에 불과하다. 코레일은 벽지노선 운영 등 모든 공적 의무(PSO)를 부담하는 반면, SR은 황금 노선인 경부·호남선 운행 독점권을 부여받았다. 이러한 구조적 불평등 속에서 발생하는 사회적 낭비는 2018년 국토교통부 연구용역 결과, 연간 559억 원에 달하는 것으로 추산됐다.</p>
+        <img src="images/KTX_2.png" alt="나란히 서 있는 KTX와 SRT 열차">
+        <p>전 세계가 실패를 인정하고 통합의 길로 나아가고 있는 지금, 한국 철도만 '분리'라는 낡은 유령에 사로잡혀 있을 이유는 없다. KTX-SRT 통합은 단순히 두 회사를 합치는 것을 넘어, 시대착오적인 정책을 바로잡고 한국 철도의 공공성과 효율성을 한 단계 끌어올리는 역사적 과업이다.</p>
         
         <a href="#top" class="back-to-top">목차로 돌아가기</a>
     </section>
@@ -178,5 +230,4 @@
     </footer>
 </body>
 </html>
-
 
