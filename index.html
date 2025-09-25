@@ -33,20 +33,6 @@
             font-weight: 500;
             margin-left: 0.25rem;
         }
-        .hero-image {
-            width: 100%; height: 300px; background-size: cover; background-position: center;
-            display: flex; align-items: flex-start; justify-content: center;
-            padding: 1.5rem; color: white; position: relative;
-        }
-        .hero-image::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.3);
-        }
-        .hero-image h2 {
-            font-size: 1.5rem; font-weight: 900; text-align: center;
-            text-shadow: 1px 1px 3px #000, -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000;
-            z-index: 1; position: relative;
-        }
         .toc-section { padding: 2rem 1rem; background-color: #ffffff; }
         .toc-section h2 {
             font-size: 1.5rem; color: #1a3a5f; margin-bottom: 1.5rem;
@@ -119,9 +105,11 @@
             <h1>고양고속지부 웹진 |<span>전수교육특집</span></h1>
         </a>
     </header>
-    <section class="hero-image" style="background-image: url('images/poster3.png');">
-        <h2>되풀이되는 비극<br>이제는 멈춰야 합니다</h2>
+
+    <section class="main-image-section">
+        <img src="images/sounds.jpg" alt="고양고속지부 웹진 메인 이미지" class="w-full h-auto">
     </section>
+
     <section class="toc-section">
         <h2>주요 기사</h2>
         <a href="#article1">
@@ -227,3 +215,4 @@
     </footer>
 </body>
 </html>
+
