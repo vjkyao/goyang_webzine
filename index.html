@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양고속지부 웹진 | 총력투쟁특집</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7; color: #333; background-color: #f4f6f8;
+        }
+        .header {
+            background: #ffffff; padding: 0.8rem 1rem; text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0;
+            z-index: 1000; border-bottom: 3px solid #00529b;
+        }
+        .header a {
+            text-decoration: none; color: inherit; display: flex;
+            align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .header-logo { max-width: 150px; height: auto; }
+        .header h1 {
+            font-size: 0.9rem; font-weight: 700; color: #2c3e50; white-space: nowrap;
+        }
+        .header h1 span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 0.25rem;
+        }
+        .toc-section { padding: 2rem 1rem; background-color: #ffffff; }
+        .toc-section a { text-decoration: none; color: inherit; }
+        .article-card {
+            display: flex; gap: 1rem; padding: 1rem; margin-bottom: 1rem;
+            background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;
+            border-left: 5px solid #00529b;
+        }
+        .article-card:hover {
+            transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+        .article-thumbnail {
+            width: 90px; height: 90px; border-radius: 4px; object-fit: cover; flex-shrink: 0;
+        }
+        .article-content { flex: 1; }
+        .article-content h3 {
+            font-size: 1.1rem; font-weight: 700; color: #2c3e50; margin-bottom: 0.3rem; line-height: 1.4;
+        }
+        .article-content p {
+            font-size: 0.9rem; color: #555; line-height: 1.5; display: -webkit-box;
+            -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .footer {
+            background: #2c3e50; color: white; text-align: center;
+            padding: 2.5rem 1rem; margin-top: 2rem;
+        }
+        .footer a {
+            color: inherit; text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="header">
+        <a href="#top">
+            <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">
+            <h1>고양고속지부 웹진 |<span>총력투쟁특집</span></h1>
+        </a>
+    </header>
+
+    <section class="main-image-section">
+        <img src="images/RWU_0.jpg" alt="고양고속지부 웹진 메인 이미지" class="w-full h-auto">
+    </section>
+
+    <section class="toc-section">
+        <!-- 연재기사 3부작 (메인) -->
+        <h2 class="text-xl font-black text-center mb-2 text-gray-800">[연재기사 3부작]</h2>
+        <p class="text-center mb-6 text-gray-600 font-semibold">단결투쟁, 우리의 권리는 누가 지켜주는가</p>
+
+        <div class="grid grid-cols-3 gap-2 md:gap-4 mb-8">
+            <a href="article_250922_1.html" class="block group text-center">
+                <div class="relative inline-block">
+                    <img src="images/WU1_0.png" alt="연재기사 1편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">1편</div>
+                </div>
+                <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">보이지 않는 전선-노조 무력화 전략</p></div>
+            </a>
+            <a href="article_251013_1.html" class="block group text-center">
+                <div class="relative inline-block">
+                    <img src="images/WU4_0.png" alt="연재기사 2편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">2편</div>
+                </div>
+                 <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">단결이 무너진 자리-유성기업과 쌍용차의 피눈물</p></div>
+            </a>
+            <a href="article_251013_2.html" class="block group text-center">
+                <div class="relative inline-block">
+                    <img src="images/WU5_0.png" alt="연재기사 3편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">3편</div>
+                </div>
+                 <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">단결 혹은 침묵-10-11월, 승리를 위한 행동 로드맵</p></div>
+            </a>
+        </div>
+
+        <hr class="my-10 border-gray-300">
+
+        <h2 class="text-xl font-black text-center mb-6 text-gray-800">전체 기사 목록</h2>
+        
+        <!-- 집중기획 3부작 (목록 내 블록) -->
+        <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h3 class="text-lg font-bold text-center mb-1 text-gray-700">[집중기획 3부작]</h3>
+            <p class="text-center mb-4 text-gray-600 text-sm">KTX-SRT 통합, 더 이상 미룰 수 없는 과제</p>
+            <div class="grid grid-cols-3 gap-2 md:gap-4">
+                <a href="article_250929_1.html" class="block group text-center">
+                    <div class="relative inline-block">
+                        <img src="images/WU1_0.png" alt="집중기획 1편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white text-xs font-bold px-2 py-0.5 rounded-full">1편</div>
+                    </div>
+                    <div class="mt-2 px-1"><p class="text-gray-700 text-xs md:text-sm font-semibold leading-tight">경쟁 신화의 종말</p></div>
+                </a>
+                <a href="article_250929_2.html" class="block group text-center">
+                    <div class="relative inline-block">
+                        <img src="images/WU2_0.png" alt="집중기획 2편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white text-xs font-bold px-2 py-0.5 rounded-full">2편</div>
+                    </div>
+                     <div class="mt-2 px-1"><p class="text-gray-700 text-xs md:text-sm font-semibold leading-tight">기울어진 운동장</p></div>
+                </a>
+                <a href="article_250929_3.html" class="block group text-center">
+                    <div class="relative inline-block">
+                        <img src="images/WU3_0.png" alt="집중기획 3편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white text-xs font-bold px-2 py-0.5 rounded-full">3편</div>
+                    </div>
+                     <div class="mt-2 px-1"><p class="text-gray-700 text-xs md:text-sm font-semibold leading-tight">분열의 대가</p></div>
+                </a>
+            </div>
+        </div>
+
+        <a href="./article_250923_1.html">
+            <div class="article-card">
+                 <img src="images/Coun_1.jpg" alt="대의원대회 이미지" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>[특별호] 11월, 우리의 손으로 통합을!</h3>
+                    <p>9.17 임시대의원대회 핵심 결과 보고와 수정된 일정 로드맵.</p>
+                </div>
+            </div>
+        </a>
+        <a href="./article2.html">
+            <div class="article-card">
+                 <img src="images/KTX_worker1.png" alt="근골격계 조사 이미지" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>'골병'은 운명이 아닙니다</h3>
+                    <p>근골격계 위험요인조사, 제대로 알고 우리의 건강권을 쟁취합시다.</p>
+                </div>
+            </div>
+        </a>
+        <a href="./article5.html">
+            <div class="article-card">
+                 <img src="images/plute_man.jpg" alt="플루트 이미지" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>[특급작전] 그대, 기름때 묻은 손으로 피리를 불어라!</h3>
+                    <p>지부, 투쟁 플루트 1기 대원 극비 모집! 당신의 메마른 감수성을 풀충전할 기회!</p>
+                </div>
+            </div>
+        </a>
+    </section>
+    
+    <footer class="footer">
+        <h3>전국철도노동조합 고양고속차량지부</h3>
+        <a href="https://naver.me/GQSaxtyC" target="_blank">
+            <p>© 2025 전국철도노동조합 고양고속차량지부 all rights reserved</p>
+            <p class="mt-2 text-sm opacity-80">독자의 투고를 기다립니다.</p>
+        </a>
+    </footer>
+</body>
+</html>
+
+
+
+
