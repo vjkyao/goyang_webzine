@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양고속지부 웹진 | 통상임금 심층기획</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7; color: #333; background-color: #f4f6f8;
+        }
+        .header {
+            background: #ffffff; padding: 0.8rem 1rem; text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0;
+            z-index: 1000; border-bottom: 3px solid #00529b;
+        }
+        .header a {
+            text-decoration: none; color: inherit; display: flex;
+            align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .header-logo { max-width: 150px; height: auto; }
+        .header h1 {
+            font-size: 0.9rem; font-weight: 700; color: #2c3e50; white-space: nowrap;
+        }
+        .header h1 span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 0.25rem;
+        }
+        .article-section {
+            padding: 2rem 1rem; margin-top: 1rem; background-color: white; max-width: 800px; margin-left: auto; margin-right: auto;
+        }
+        .article-section h2 {
+            font-size: 1.6rem; color: #1a3a5f; margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem; border-bottom: 3px solid #ffc107; font-weight: 900;
+        }
+        .article-section h3 {
+            font-size: 1.3rem; font-weight: 700; color: #1a3a5f; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;
+        }
+         .article-section .lead {
+             font-size: 1.1rem;
+             font-weight: 600;
+             color: #333;
+             margin-bottom: 2rem;
+             padding: 1rem;
+             background-color: #f8f9fa;
+             border-left: 5px solid #00529b;
+        }
+        .article-section p {
+            font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; color: #333; text-align: justify;
+        }
+        .article-section img.article-image { /* 이미지 스타일 통일 */
+            width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        /* strong 태그 스타일 */
+        .article-section strong {
+            font-weight: 700;
+            color: #00529b; /* 노조 파란색으로 강조 */
+        }
+        /* 법조항 인용구 스타일 */
+        .quote-box {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #ffc107; /* 노란색 강조 */
+            font-style: italic;
+        }
+        .quote-box p {
+            margin-bottom: 0.5rem;
+        }
+        /* 핵심 요약 박스 스타일 */
+        .summary-box {
+            background-color: #fffbeb;
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .summary-box h3 {
+            font-size: 1.2rem;
+            color: #856404;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: none;
+            text-align: center;
+            font-weight: 900;
+        }
+        .summary-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .summary-box li {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .summary-box li strong {
+            color: #856404;
+        }
+
+        .back-to-top {
+            display: block; text-align: center;
+            padding: 0.8rem; background-color: #2c3e50; color: white;
+            text-decoration: none; font-weight: 700; border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        .back-to-top:hover {
+            background-color: #1a3a5f;
+        }
+        .footer {
+            background: #2c3e50; color: white; text-align: center;
+            padding: 2.5rem 1rem; margin-top: 1rem;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">
+            <!-- 제목 수정 -->
+            <h1>고양고속지부 웹진 |<span>통상임금 심층기획</span></h1>
+        </a>
+    </header>
+
+    <!-- Full Article Section -->
+    <section class="article-section">
+        <h2>[심층기획] 통상임금 ‘시수 꼼수’, 법보다 유리한 단협을 이길 수 없다!</h2>
+        <p class="lead">2024년 대법원 판결의 완전한 이행, 사측의 논리 왜곡을 바로잡는다</p>
+        
+        <img src="images/LSA_1.png" alt="대법원 판결 승리" class="article-image">
+
+        <p>2024년 12월 19일, 대법원 전원합의체 판결(2020다247190)은 지난 10여 년간 왜곡된 통상임금 체계를 바로잡은 역사적인 전환점이었습니다.</p>
+        <p>그동안 ‘고정성’이라는 말은 사측이 노동자의 정당한 임금을 축소하기 위한 수단으로 악용되어 왔습니다. “지급일 현재 재직 중인 자”, “월 15일 이상 근무 시”와 같은 편법적 조건을 내세워, 우리가 매달 받아온 급식비와 각종 수당, 상여금조차 통상임금이 아니라고 우겨온 것입니다.</p>
+        
+        <img src="images/LSA_2.png" alt="통상임금 항목 확대" class="article-image">
+
+        <p>그러나 이번 대법원 판결은 그 낡은 빗장을 완전히 부쉈습니다. ‘재직 조건’과 같은 형식적 요건과 무관하게, 노동의 대가로 정기적·일률적으로 지급되는 금품은 통상임금이라는 대원칙을 다시 세웠습니다.</p>
+        <p>이 판결로 우리 조합은 기존 6개 항목에 더해 상여금, 급식비, 업무지원수당 등 8개 항목을 통상임금(분자)에 새롭게 포함시켰습니다. 이는 단순히 수당 몇 개가 늘어난 문제가 아니라, 우리 노동의 가치가 법적으로 인정받기 시작한 결정적 승리였습니다.</p>
+
+        <h3>사측의 꼼수: 승리의 과실을 줄이려는 계산</h3>
+        <img src="images/LSA_3.png" alt="사측의 꼼수" class="article-image">
+        <p>하지만 판결의 잉크가 마르기도 전에 사측은 또 다른 계산을 들고 나왔습니다. 통상임금 항목(분자)은 마지못해 인정하면서, 시급을 계산하는 기준인 <strong>시수(분모)</strong>를 바꾸겠다고 일방적으로 통보한 것입니다.</p>
+        <p>지난 11월 5일 공문에서 사측은 ‘고용노동부 지침’을 핑계로, 수십 년간 노사가 합의해 온 단체협약상의 <strong>209시간을 무시하고, '근무형태별 법정 시수(교대 216시간, 교번 242시간 등)'</strong>를 적용하겠다고 밝혔습니다.</p>
+        <p>이는 명백한 임금 삭감 시도입니다. 분모를 인위적으로 늘려 시급을 낮추는 방식으로, 대법원 판결의 효과를 사실상 무력화하려는 계산입니다.</p>
+
+        <h3>사측의 논리: “유리한 것만 골라먹지 마라”</h3>
+        <img src="images/LSA_4_1.png" alt="사측의 논리" class="article-image">
+        <p>사측은 ‘유리한 조건 취사선택 금지’라는 낯선 법리를 들이대며 이렇게 주장합니다. “노조가 통상임금 항목은 법(대법 판결)대로 확대하자면서, 왜 시수는 단협(209시간)을 고집하느냐. 이는 유리한 것만 골라 먹는 체리피킹이다.”</p>
+        <p>언뜻 공평해 보이는 이 논리는, 교묘하게 진실을 비틀고 있습니다.</p>
+
+        <h3>우리의 반박: ‘취사선택’이 아닌 근로기준법 상의 ‘유리한 조건 우선 원칙’</h3>
+        <img src="images/LSA_5.png" alt="노조의 정당한 반박" class="article-image">
+        <p>우리의 입장은 명확합니다. 이것은 ‘취사선택’이 아닙니다. 이는 노동부의 행정해석 따위가 침범할 수 없는 헌법상 노동기본권이며, <strong>근로기준법 제15조(유리한 조건 우선의 원칙)</strong>에 따른 정당한 권리 행사입니다.</p>
+        
+        <div class="quote-box">
+            <p><strong>근로기준법 제15조(이 법 위반의 근로계약)</strong><br>
+            ① 이 법에서 정하는 기준에 <strong>미치지 못하는</strong> 근로조건을 정한 근로계약은 그 부분에 한하여 <strong>무효</strong>로 한다.<br>
+            ② 제1항에 따라 무효로 된 부분은 이 법에서 정한 기준에 따른다.</p>
+        </div>
+        
+        <p>즉, 법은 ‘최저 기준’이며, 그보다 <strong>유리한 단체협약은 유효하고 존중되어야 한다</strong>는 뜻입니다. 더 나아가, <strong>노동부의 행정해석은 사법부의 판결보다 하위에 있으며, 노사 자치의 최고 규범인 단체협약의 효력을 일방적으로 정지시킬 수 없습니다.</strong> 사측의 논리는 법리적으로도, 상식적으로도 설 자리가 없습니다.</p>
+
+        <h3>항목은 법대로, 시수는 단협대로 — 법리의 정당한 구분</h3>
+        <img src="images/LSA_6.png" alt="법리 구분" class="article-image">
+        <p>2024년 대법원 판결로 8개 항목이 통상임금에서 제외된 기존 단협 조항은 법정 기준에 미달한 무효 조항이 되었습니다. 따라서 법에서 정한 기준(14개 항목)을 적용하는 것은 우리가 ‘선택’한 것이 아니라, 법이 강제한 <strong>시정조치</strong>입니다.</p>
+        <p>반면 시수 문제는 다릅니다. 교대·교번 근무자의 경우, 단협상 209시간은 사측이 주장하는 법정 시수(216시간, 242시간)보다 조합원에게 <strong>유리합니다.</strong> 법보다 유리한 단협 조항은 근로기준법이 보장하는 노동자의 권리이며, 사측은 이를 준수해야 합니다.</p>
+        <p>야간격일제 근무자의 경우, 근로기준법상 월 통상임금 산정 기준은 187시간입니다. 그러나 사측은 지금까지 단협의 일괄 기준인 209시간을 적용해 왔습니다. 이는 법이 보장한 기준보다 <strong>불리한</strong> 계산 방식으로, 결과적으로 근로기준법에 미달하는 시수를 적용해 온 것입니다.</p>
+        
+        <img src="images/LSA_4.png" alt="체불임금 회수 투쟁" class="article-image">
+        
+        <p>이 잘못된 분모 적용으로 발생한 차액을 노조는 체불임금으로 회수하기 위한 대표소송을 진행할 예정입니다. <strong>이는 단순한 법리 투쟁이 아니라, 조합원의 단협상 권리를 지키는 정당한 투쟁입니다.</strong></p>
+        <p> 법보다 불리한 것은 시정하고, 유리한 것은 지키는 것—이것이 우리의 원칙입니다.</p>
+
+        <h3>사측의 ‘세트메뉴 협상’ 논리, 왜 틀렸는가</h3>
+        <!-- [LSA_7.png] 이미지 추가 -->
+        <img src="images/LSA_7.png" alt="세트메뉴 비유" class="article-image">
+        <p>사측이 말하는 ‘세트메뉴 협상’은 어불성설입니다. 통상임금의 ‘분자’, 즉 항목 확대는 이미 대법원의 시정조치로 확정된 사안이며 협상의 대상이 아닙니다. 사측은 이 확정된 항목을 건드릴 수 없게 되자, 억지로 ‘분모(시수)’를 바꿔 전체 계산을 줄이려는 꼼수를 내놓았습니다.</p>
+        <p>이는 마치 위생 문제로 교체 명령이 내려진 재료(불량한 빵)를 두고, ‘불량한 빵과 패티 2장 세트’와 ‘깨끗한 빵과 패티 1장 세트’ 중 하나를 고르라고 하는 격입니다. <strong>위생 시정(항목 확대)은 '선택'이 아니라 '의무'이며, 패티의 장 수(209시간)는 이미 우리가 합의한 '권리'입니다. 사측은 이제 와서 의무를 이행하는 대가로 우리의 권리를 빼앗으려는 것입니다.</strong></p>
+        <p>따라서 ‘분자 확대’는 법으로 이미 끝난 문제이며, 지금 우리가 싸워야 할 진짜 쟁점은 사측이 조작하려는 분모의 확대, 즉 시급을 낮추려는 계산입니다. 이 부분은 법리와 투쟁으로 정면 돌파해야 합니다.</p>
+
+        <h3>흔들림 없는 단결로 정면 돌파하자</h3>
+        <!-- [LSA_8.png] 이미지 추가 -->
+        <img src="images/LSA_8.png" alt="단결 투쟁" class="article-image">
+        <p>노동조합 중앙쟁의대책위원회는 사측의 일방적인 단협 위반에 맞서, 교섭 요구와 함께 즉각적인 법적 대응에 돌입할 것입니다. 우리는 교대·교번 조합원을 위해 <strong>‘단협 209시간’ 적용을 요구하는 임금 차액 지급 대표 소송</strong>과, 야간격일제 조합원을 위해 <strong>‘법정 187시간’ 적용을 요구하는 임금 체불 청구 소송</strong>을 진행할 것입니다.</p>
+        <p>이는 모순이 아니라, “조합원에게 가장 유리한 조건을 적용한다”는 근로기준법의 대원칙을 일관되게 관철하는 것입니다.</p>
+        <!-- <.p> -> <p> 수정 -->
+        <p>동지 여러분, 사측의 그럴듯한 논리 뒤에는 언제나 임금 삭감의 계산이 숨어 있습니다. 우리의 요구는 법과 원칙에 근거한 정당한 권리입니다. 이 기사의 내용을 현장 곳곳에 전파해 주십시오. 집행부를 믿고, 향후 투쟁에 흔들림 없이 함께해 주십시오.</p>
+        <p><strong>이 싸움은 한 사람의 임금이 아니라 모든 철도 노동자의 기준을 지키는 싸움입니다.</strong> 우리의 단결된 힘만이 사측의 꼼수를 분쇄하고 승리를 완성할 수 있습니다. <strong>투쟁!</strong></p>
+
+        <!-- 기사 핵심 요약 -->
+        <div class="summary-box">
+            <h3>[기사 핵심 요약]</h3>
+            <ul>
+                <li><strong>판결:</strong> 대법원 판결(2024.12.19, 전원합의체, 2020다247190)은 ‘재직 조건’ 등 편법을 폐지하고 상여금 등 8개 항목을 통상임금(<strong>분자</strong>)으로 추가 편입시켰다.</li>
+                <li><strong>사측:</strong> 노동부 지침을 핑계로 <strong>시수(분모)</strong>를 늘려(216h/242h) 임금 인상 효과를 무력화하려 시도 중. “유리한 것만 취사선택 말라”는 논리를 내세운다.</li>
+                <li><strong>노조:</strong> 취사선택이 아니다. <strong>근로기준법 제15조(유리한 조건 우선의 원칙)</strong>에 따라, 유리한 단협(209h)은 지키고 불리하게 적용돼 온 야간격일제(187h)는 법 기준으로 바로잡는다. 총력 투쟁으로 대응한다.</li>
+                <li><strong>결의:</strong> 이 싸움은 한 사람의 임금이 아니라 모든 철도 노동자의 기준을 지키는 싸움이다. <strong>단결만이 우리의 통상임금이다.</strong></li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-to-top mt-8">목차로 돌아가기</a>
+    </section>
+    
+    <footer class="footer">
+        <h3>전국철도노동조합 고양고속차량지부</h3>
+        <!-- article 페이지 푸터 (독자의 투고 링크 없음) -->
+        <p>© 2025 전국철도노동조합 고양고속차량지부 all rights reserved &nbsp;&nbsp;|&nbsp;&nbsp; 발행인: 김숭식</p>
+    </footer>
+</body>
+</html>
