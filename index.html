@@ -33,6 +33,41 @@
             font-weight: 500;
             margin-left: 0.25rem;
         }
+        /* --- 메인 이미지 스타일 수정 --- */
+        .main-image-section {
+            position: relative;
+        }
+        .main-image-section a {
+            display: block;
+            position: relative;
+        }
+        .main-image-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-start; /* 상단 정렬 */
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.4); /* 어두운 오버레이 */
+            transition: background-color 0.3s ease;
+        }
+        .main-image-overlay:hover {
+            background-color: rgba(0, 0, 0, 0.2); /* 호버 시 살짝 밝게 */
+        }
+        .main-image-overlay h2 {
+            color: white;
+            font-size: 1.25rem; /* 모바일 기준 크기 */
+            font-weight: 900;
+            text-align: center;
+            padding: 1.5rem 1rem 0 1rem; /* 상단 여백 */
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        @media (min-width: 768px) { /* 데스크탑에서 폰트 크기 */
+            .main-image-overlay h2 {
+                font-size: 1.75rem; /* 기존보다 작은 크기로 수정 */
+            }
+        }
+        /* --- --- */
+
         .toc-section { padding: 2rem 1rem; background-color: #ffffff; }
         .toc-section a { text-decoration: none; color: inherit; }
         .article-card {
@@ -44,6 +79,14 @@
         .article-card:hover {
             transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
         }
+        /* 새 기사 강조 스타일 */
+        .article-card-new {
+            border-left-color: #D9534F; /* 붉은색으로 강조 */
+        }
+        .article-card-new h3 {
+            color: #D9534F !important; /* 제목 붉은색 */
+        }
+
         .article-thumbnail {
             width: 90px; height: 90px; border-radius: 4px; object-fit: cover; flex-shrink: 0;
         }
@@ -58,6 +101,12 @@
         .footer {
             background: #2c3e50; color: white; text-align: center;
             padding: 2.5rem 1rem; margin-top: 2rem;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: white;
+            text-align: center;
         }
         .footer a {
             color: inherit; text-decoration: none;
@@ -76,43 +125,63 @@
     </header>
 
     <section class="main-image-section">
-        <img src="images/wscup.jpg" alt="고양고속지부 웹진 메인 이미지" class="w-full h-auto">
+        <!-- 메인 이미지 LSA_0.png로 변경, 링크 article_251107_1.html로 변경 -->
+        <a href="article_251107_1.html">
+            <img src="images/LSA_0.png" alt="통상임금 심층기획" class="w-full h-auto">
+            <div class="main-image-overlay">
+                <!-- 오버레이 텍스트 상단 배치 및 크기 축소 -->
+                <h2 class="text-white text-lg md:text-xl font-black text-center p-4">
+                    [심층기획] 통상임금 시수 꼼수, 그 진실은?
+                </h2>
+            </div>
+        </a>
     </section>
 
     <section class="toc-section">
-        <!-- 연재기사 3부작 (메인) -->
-        <h2 class="text-xl font-black text-center mb-2 text-gray-800">[연재기사 3부작]</h2>
-        <p class="text-center mb-6 text-gray-600 font-semibold">단결투쟁, 우리의 권리는 누가 지켜주는가</p>
-
-        <div class="grid grid-cols-3 gap-2 md:gap-4 mb-8">
-            <a href="article_250922_1.html" class="block group text-center">
-                <div class="relative inline-block">
-                    <img src="images/WU1_0.png" alt="연재기사 1편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">1편</div>
-                </div>
-                <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">보이지 않는 전선-노조 무력화 전략</p></div>
-            </a>
-            <a href="article_251013_1.html" class="block group text-center">
-                <div class="relative inline-block">
-                    <img src="images/WU4_0.png" alt="연재기사 2편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">2편</div>
-                </div>
-                 <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">단결이 무너진 자리-유성기업과 쌍용차의 피눈물</p></div>
-            </a>
-            <a href="article_251013_2.html" class="block group text-center">
-                <div class="relative inline-block">
-                    <img src="images/WU5_0.png" alt="연재기사 3편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">3편</div>
-                </div>
-                 <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">단결 혹은 침묵-10-11월, 승리를 위한 행동 로드맵</p></div>
-            </a>
-        </div>
-
-        <hr class="my-10 border-gray-300">
 
         <h2 class="text-xl font-black text-center mb-6 text-gray-800">전체 기사 목록</h2>
         
-        <!-- 집중기획 3부작 (목록 내 블록) -->
+        <!-- 1. 신규 통상임금 기사 (최상단 배치) -->
+        <a href="./article_251107_1.html">
+            <div class="article-card article-card-new"> <!-- 새 기사 강조 클래스 -->
+                 <img src="images/LSA_5.png" alt="통상임금 기사" class="article-thumbnail">
+                <div class="article-content">
+                    <h3 class="text-red-700">[심층기획] 통상임금 ‘시수 꼼수’, 법보다 유리한 단협을 이길 수 없다!</h3>
+                    <p>2024년 대법원 판결의 완전한 이행, 사측의 논리 왜곡을 바로잡는다.</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- 2. 연재기사 3부작 (메인에서 목록으로 이동) -->
+        <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h3 class="text-lg font-bold text-center mb-1 text-gray-700">[연재기사 3부작]</h3>
+            <p class="text-center mb-4 text-gray-600 text-sm">단결투쟁, 우리의 권리는 누가 지켜주는가</p>
+            <div class="grid grid-cols-3 gap-2 md:gap-4">
+                <a href="article_250922_1.html" class="block group text-center">
+                    <div class="relative inline-block">
+                        <img src="images/WU1_0.png" alt="연재기사 1편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">1편</div>
+                    </div>
+                    <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">보이지 않는 전선</p></div>
+                </a>
+                <a href="article_251013_1.html" class="block group text-center">
+                    <div class="relative inline-block">
+                        <img src="images/WU4_0.png" alt="연재기사 2편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">2편</div>
+                    </div>
+                     <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">단결이 무너진 자리</p></div>
+                </a>
+                <a href="article_251013_2.html" class="block group text-center">
+                    <div class="relative inline-block">
+                        <img src="images/WU5_0.png" alt="연재기사 3편" class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">3편</div>
+                    </div>
+                     <div class="mt-2 px-1"><p class="text-gray-800 text-xs md:text-sm font-semibold leading-tight">단결 혹은 침묵</p></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 3. 집중기획 3부작 (목록 내 블록) -->
         <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
             <h3 class="text-lg font-bold text-center mb-1 text-gray-700">[집중기획 3부작]</h3>
             <p class="text-center mb-4 text-gray-600 text-sm">KTX-SRT 통합, 더 이상 미룰 수 없는 과제</p>
@@ -141,15 +210,7 @@
             </div>
         </div>
 
-        <a href="./article_250923_1.html">
-            <div class="article-card">
-                 <img src="images/Coun_1.jpg" alt="대의원대회 이미지" class="article-thumbnail">
-                <div class="article-content">
-                    <h3>[특별호] 11월, 우리의 손으로 통합을!</h3>
-                    <p>9.17 임시대의원대회 핵심 결과 보고와 수정된 일정 로드맵.</p>
-                </div>
-            </div>
-        </a>
+        <!-- 4. '골병'은 운명이 아닙니다 -->
         <a href="./article2.html">
             <div class="article-card">
                  <img src="images/KTX_worker1.png" alt="근골격계 조사 이미지" class="article-thumbnail">
@@ -159,6 +220,8 @@
                 </div>
             </div>
         </a>
+
+        <!-- 5. [특급작전] 그대, 기름때 묻은 손으로 피리를 불어라! -->
         <a href="./article5.html">
             <div class="article-card">
                  <img src="images/plute_man.jpg" alt="플루트 이미지" class="article-thumbnail">
@@ -172,15 +235,11 @@
     
     <footer class="footer">
         <h3>전국철도노동조합 고양고속차량지부</h3>
+        <!-- '독자의 투고' 링크 및 발행인 정보 복원 및 수정 -->
         <a href="https://naver.me/GQSaxtyC" target="_blank">
-            <p>© 2025 전국철도노동조합 고양고속차량지부 all rights reserved</p>
+            <p>© 2025 전국철도노동조합 고양고속차량지부 all rights reserved &nbsp;&nbsp;|&nbsp;&nbsp; 발행인: 김숭식</p>
             <p class="mt-2 text-sm opacity-80">독자의 투고를 기다립니다.</p>
         </a>
     </footer>
 </body>
 </html>
-
-
-
-
-
