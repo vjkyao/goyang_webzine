@@ -33,37 +33,49 @@
             font-weight: 500;
             margin-left: 0.25rem;
         }
+        
         /* --- 메인 이미지 스타일 수정 --- */
         .main-image-section {
             position: relative;
         }
-        .main-image-section a {
-            display: block;
-            position: relative;
-        }
+        /* a 태그 제거됨 */
         .main-image-overlay {
             position: absolute;
-            inset: 0;
+            inset: 0; /* top/bottom/left/right = 0 */
             display: flex;
-            align-items: flex-start; /* 상단 정렬 */
-            justify-content: center;
+            flex-direction: column; /* 세로 정렬 */
+            justify-content: space-between; /* 상단과 하단으로 분리 */
+            align-items: center; /* 가로 중앙 정렬 */
             background-color: rgba(0, 0, 0, 0.4); /* 어두운 오버레이 */
-            transition: background-color 0.3s ease;
+            pointer-events: none; 
         }
-        .main-image-overlay:hover {
-            background-color: rgba(0, 0, 0, 0.2); /* 호버 시 살짝 밝게 */
-        }
-        .main-image-overlay h2 {
+        
+        /* 상단 텍스트 (기존 크기) */
+        .overlay-text-top {
             color: white;
-            font-size: 1.25rem; /* 모바일 기준 크기 */
+            font-size: 3.75rem; /* 모바일 기준 크기 */
             font-weight: 900;
             text-align: center;
             padding: 1.5rem 1rem 0 1rem; /* 상단 여백 */
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
         }
+
+        /* 하단 텍스트 (3배 크기) */
+        .overlay-text-bottom {
+            color: white;
+            font-size: 3.75rem; /* 수정: 모바일 1.25rem * 3 */
+            font-weight: 900;
+            text-align: center;
+            padding: 0 1rem 1.5rem 1rem; /* 수정: 하단 여백 */
+            text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.9);
+        }
+
         @media (min-width: 768px) { /* 데스크탑에서 폰트 크기 */
-            .main-image-overlay h2 {
-                font-size: 1.75rem; /* 기존보다 작은 크기로 수정 */
+            .overlay-text-top {
+                font-size: 5.25rem; /* 기존 데스크탑 크기 */
+            }
+            .overlay-text-bottom {
+                font-size: 5.25rem; /* 수정: 데스크탑 1.75rem * 3 */
             }
         }
         /* --- --- */
@@ -125,16 +137,18 @@
     </header>
 
     <section class="main-image-section">
-        <!-- 메인 이미지 LSA_0.png로 변경, 링크 article_251107_1.html로 변경 -->
-        <a href="article_251107_1.html">
-            <img src="images/LSA_0.png" alt="통상임금 심층기획" class="w-full h-auto">
-            <div class="main-image-overlay">
-                <!-- 오버레이 텍스트 상단 배치 및 크기 축소 -->
-                <h2 class="text-white text-lg md:text-xl font-black text-center p-4">
-                    [심층기획] 통상임금 시수 꼼수, 그 진실은?
-                </h2>
-            </div>
-        </a>
+        <!-- 메인 이미지 82.png로 변경, 링크 제거 -->
+        <img src="images/82.png" alt="쟁의행위 가결" class="w-full h-auto">
+        <div class="main-image-overlay">
+            <!-- 상단 텍스트 -->
+            <h2 class="overlay-text-top">
+                쟁의행위투표
+            </h2>
+            <!-- 하단 텍스트 -->
+            <h2 class="overlay-text-bottom">
+                압도적 가결!
+            </h2>
+        </div>
     </section>
 
     <section class="toc-section">
@@ -146,7 +160,7 @@
             <div class="article-card article-card-new"> <!-- 새 기사 강조 클래스 -->
                  <img src="images/LSA_5.png" alt="통상임금 기사" class="article-thumbnail">
                 <div class="article-content">
-                    <h3 class="text-red-700">[심층기획] 통상임금 ‘시수 꼼수’, 법보다 유리한 단협을 이길 수 없다!</h3>
+                    <h3>[심층기획] 통상임금 ‘시수 꼼수’, 법보다 유리한 단협을 이길 수 없다!</h3>
                     <p>2024년 대법원 판결의 완전한 이행, 사측의 논리 왜곡을 바로잡는다.</p>
                 </div>
             </div>
@@ -180,7 +194,7 @@
                 </a>
             </div>
         </div>
-
+        
         <!-- 3. 집중기획 3부작 (목록 내 블록) -->
         <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
             <h3 class="text-lg font-bold text-center mb-1 text-gray-700">[집중기획 3부작]</h3>
@@ -235,7 +249,7 @@
     
     <footer class="footer">
         <h3>전국철도노동조합 고양고속차량지부</h3>
-        <!-- '독자의 투고' 링크 및 발행인 정보 복원 및 수정 -->
+        <!-- '독자의 투고' 링크 및 발행인 정보 원복 -->
         <a href="https://naver.me/GQSaxtyC" target="_blank">
             <p>© 2025 전국철도노동조합 고양고속차량지부 all rights reserved &nbsp;&nbsp;|&nbsp;&nbsp; 발행인: 김숭식</p>
             <p class="mt-2 text-sm opacity-80">독자의 투고를 기다립니다.</p>
