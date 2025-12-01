@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양고속지부 웹진 | 총파업특보</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7; color: #333; background-color: #f4f6f8;
+        }
+        .header {
+            background: #ffffff; padding: 0.8rem 1rem; text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0;
+            z-index: 1000; border-bottom: 3px solid #00529b;
+        }
+        .header a {
+            text-decoration: none; color: inherit; display: flex;
+            align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .header-logo { max-width: 150px; height: auto; }
+        .header h1 {
+            font-size: 0.9rem; font-weight: 700; color: #2c3e50; white-space: nowrap;
+        }
+        .header h1 span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 0.25rem;
+        }
+        .article-section {
+            padding: 2rem 1rem; margin-top: 1rem; background-color: white; max-width: 800px; margin-left: auto; margin-right: auto;
+        }
+        .article-section h2 {
+            font-size: 1.6rem; color: #1a3a5f; margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem; border-bottom: 3px solid #ffc107; font-weight: 900; line-height: 1.3;
+        }
+        .article-section h3 {
+            font-size: 1.3rem; font-weight: 700; color: #1a3a5f; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;
+        }
+         .article-section .lead {
+             font-size: 1.1rem;
+             font-weight: 600;
+             color: #333;
+             margin-bottom: 2rem;
+             padding: 1rem;
+             background-color: #f8f9fa;
+             border-left: 5px solid #00529b;
+        }
+        .article-section p {
+            font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; color: #333; text-align: justify;
+        }
+        .article-section img.article-image { 
+            width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .article-section strong {
+            font-weight: 700;
+            color: #00529b; 
+        }
+
+        /* 가로 스크롤 (캐러셀) 스타일 */
+        .carousel-container {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden; /* 둥근 모서리 적용 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        .carousel-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding-bottom: 10px; /* 스크롤바 공간 */
+            -webkit-overflow-scrolling: touch; /* 모바일 부드러운 스크롤 */
+            scroll-snap-type: x mandatory; /* 스냅 효과 */
+        }
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 80%; /* 모바일에서 옆 사진이 살짝 보이게 */
+            max-width: 300px;
+            scroll-snap-align: center;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 200px; /* 높이 고정 */
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+        .carousel-guide {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        /* 스크롤바 스타일링 (크롬, 사파리) */
+        .carousel-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .carousel-scroll::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 3px;
+        }
+        .carousel-scroll::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        .back-to-top {
+            display: block; text-align: center;
+            padding: 0.8rem; background-color: #2c3e50; color: white;
+            text-decoration: none; font-weight: 700; border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        .back-to-top:hover {
+            background-color: #1a3a5f;
+        }
+        .footer {
+            background: #2c3e50; color: white; text-align: center;
+            padding: 2.5rem 1rem; margin-top: 1rem;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">
+            <h1>고양고속지부 웹진 |<span>총파업 특보</span></h1>
+        </a>
+    </header>
+
+    <section class="article-section">
+        <h2>[투쟁 속보] 행신역 선전전과 중식 총회, 뜨거웠던 11월의 열기를 용산으로!</h2>
+        <p class="lead">
+            고양고속차량지부, 한 달간의 현장 투쟁 마무리... 이제는 ‘서울지방본부 야간총회’다<br>
+            <span style="color: #d9534f;">12월 2일(월) 19시 30분 용산역, 고속철도 통합과 성과급 정상화를 위한 총력 결집 호소</span>
+        </p>
+        
+        <p>11월 28일, 전국철도노동조합 고양고속차량지부의 ‘행신역 대국민 선전전(10.27~11.28)’과 ‘중식 총회(11.24~11.28)’ 일정이 대단원의 막을 내렸다.</p>
+        <p>지난 한 달, 우리는 현장에서 동지들과 얼굴을 마주하며 KTX-SRT 통합을 향한 뜨거운 염원을 확인했다. 매서운 칼바람 속에서도 흔들림 없었던 우리의 결의는 이제 지부 울타리를 넘어 더 큰 광장으로 향한다. 지부는 이번 현장 투쟁의 열기를 그대로 이어받아, 오는 <strong>12월 2일(월) 19시 30분 용산역에서 열리는 &lt;서울지방본부 야간총회&gt;에 총력을 다해 결집할 것을 선포했다.</strong></p>
+
+        <h3>■ 추위도 녹인 30일간의 외침... “통합의 도장을 찍으러 용산으로 가자”</h3>
+        
+        <!-- 캐러셀 1: 선전전 사진 (psy01 ~ psy07) -->
+        <div class="carousel-container">
+            <div class="carousel-scroll">
+                <div class="carousel-item"><img src="images/psy01.jpg" alt="선전전 사진 1"></div>
+                <div class="carousel-item"><img src="images/psy02.jpg" alt="선전전 사진 2"></div>
+                <div class="carousel-item"><img src="images/psy03.jpg" alt="선전전 사진 3"></div>
+                <div class="carousel-item"><img src="images/psy04.jpg" alt="선전전 사진 4"></div>
+                <div class="carousel-item"><img src="images/psy05.jpg" alt="선전전 사진 5"></div>
+                <div class="carousel-item"><img src="images/psy06.jpg" alt="선전전 사진 6"></div>
+                <div class="carousel-item"><img src="images/psy07.jpg" alt="선전전 사진 7"></div>
+            </div>
+            <div class="carousel-guide">
+                <span>←</span> 좌우로 스크롤해주세요 <span>→</span>
+            </div>
+        </div>
+
+        <p>지난 10월 27일부터 시작된 행신역 대국민 선전전이 11월 28일을 끝으로 1개월간의 대장정을 마쳤다. 고양고속차량지부 전 조합원은 매서워진 날씨에도 아랑곳하지 않고 아침저녁으로 역사에 나서 시민들에게 고속철도 통합의 당위성과 필요성을 호소했고, 수많은 시민의 공감과 지지를 이끌어냈다.</p>
+        <p>이 기간 서울지방본부 쟁의대책위원회 간부들과 진보당 위원장 등 각계의 연대 방문도 줄을 이었다. 현장을 진두지휘한 <strong>김숭식 고양고속차량지부 쟁의대책위원장</strong>은 매일 선전전을 마칠 때마다 조합원들을 마주하며 다음과 같이 호소했다.</p>
+        <p>“동지들의 헌신적인 투쟁 덕분에 역사상 그 어느 때보다 KTX-SRT 통합이 가까이 다가왔습니다. 하지만 아직 끝난 것이 아닙니다. 한시도 마음을 놓아서는 안 됩니다. 누구도 흔들 수 없는 확실한 ‘통합의 도장’을 찍을 때까지 우리는 멈추지 않아야 합니다. 그 결의를 보여주는 자리가 바로 12월 2일입니다. 용산역 야간총회에 한 분도 빠짐없이 함께해 주십시오.”</p>
+
+        <h3>■ “통합의 8부 능선 넘자”... 중식 총회서 확인한 투쟁 의지</h3>
+        
+        <!-- 캐러셀 2: 중식 총회 사진 (ga01 ~ ga08) -->
+        <div class="carousel-container">
+            <div class="carousel-scroll">
+                <div class="carousel-item"><img src="images/ga01.jpg" alt="중식 총회 사진 1"></div>
+                <div class="carousel-item"><img src="images/ga02.jpg" alt="중식 총회 사진 2"></div>
+                <div class="carousel-item"><img src="images/ga03.jpg" alt="중식 총회 사진 3"></div>
+                <div class="carousel-item"><img src="images/ga04.jpg" alt="중식 총회 사진 4"></div>
+                <div class="carousel-item"><img src="images/ga05.jpg" alt="중식 총회 사진 5"></div>
+                <div class="carousel-item"><img src="images/ga06.jpg" alt="중식 총회 사진 6"></div>
+                <div class="carousel-item"><img src="images/ga07.jpg" alt="중식 총회 사진 7"></div>
+                <div class="carousel-item"><img src="images/ga08.jpg" alt="중식 총회 사진 8"></div>
+            </div>
+            <div class="carousel-guide">
+                <span>←</span> 좌우로 스크롤해주세요 <span>→</span>
+            </div>
+        </div>
+
+        <p>28일, 4차에 걸쳐 진행된 임단협 승리 중식 총회 또한 성황리에 종료됐다. 이번 총회는 조합원들의 삶과 직결된 ‘2024년 임금·단체협약 쟁취’와 ‘KTX-SRT 통합’, ‘성과급 정상화’라는 3대 핵심 과제에 대한 투쟁 의지를 한데 모으는 용광로였다.</p>
+        <p>정의당 위원장과 서울지방본부 쟁의대책위원회 등 각계 인사의 연대가 이어진 가운데, <strong>강정남 서울지방본부 쟁의대책위원장</strong>은 격려사를 통해 현 시국을 ‘통합의 8부 능선’으로 규정했다.</p>
+        <p>강 본부장은 “지난 10년 질곡의 역사를 이제는 끝내야 한다. 동지들의 투쟁으로 국토부 관료들의 저항을 뚫고 통합 로드맵을 작성하는 8부 능선까지 다다랐다”고 치하했다. 그러나 이어 “여기서 멈추면 다시 흐지부지될 수 있다. 마지막 남은 20%를 채워 통합을 완성하느냐 마느냐는 오직 우리가 보여줄 의지에 달려있다”며 <strong>12월 2일 용산역 야간총회</strong>에 모든 역량을 집중해 줄 것을 호소했다.</p>
+
+        <h3>■ “성과급 정상화와 임금 투쟁, 우리의 단결된 힘으로 증명하자”</h3>
+        
+        <img src="images/night.jpg" alt="야간총회 독려" class="article-image">
+
+        <p>김숭식 지부쟁대위원장은 이에 호응하며 투쟁의 목표를 더욱 구체화했다. 김 위원장은 “2009년부터 15년째 이어지고 있는 기형적인 <strong>성과급 지급 기준을 이번 기회에 반드시 정상화해야 한다</strong>”고 목소리를 높였다.</p>
+        <p>특히 올해 임금 교섭의 난항을 언급하며 “우리가 연차를 이월하는 희생을 감내하며 3% 인상안을 요구하고 있지만, 여전히 사측은 예산 부족(필요 590억 원 중 320억 원만 확보된 상황)을 핑계로 쟁점을 흐리고 있다”고 지적했다. 이어 “이 문제를 어떻게 분배하고 쟁취할 것인가는 결국 우리의 단결된 힘에 달려 있다. 올해의 승리적 마무리와 내년의 희망을 위해, 12월 2일 야간총회에서 우리의 단결된 힘과 기세를 보여주자”고 간곡히 당부했다.</p>
+        <p><strong>고양의 뜨거운 바람은 이제 용산으로 향한다. 12월 2일 19시 30분 용산역, 흩어지면 죽고 뭉치면 사는 노동자의 진리를 다시 한번 증명할 때다. 투쟁!</strong></p>
+
+        <a href="index.html" class="back-to-top mt-8">목차로 돌아가기</a>
+    </section>
+    
+    <footer class="footer">
+        <h3>전국철도노동조합 고양고속차량지부</h3>
+        <p>© 2025 전국철도노동조합 고양고속차량지부 all rights reserved &nbsp;&nbsp;|&nbsp;&nbsp; 발행인: 김숭식</p>
+    </footer>
+</body>
+</html>
