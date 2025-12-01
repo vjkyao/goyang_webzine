@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고양고속지부 웹진 | 총력투쟁특집</title>
+    <title>고양고속지부 웹진 | 총파업특집</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,11 +44,11 @@
             inset: 0; 
             display: flex;
             flex-direction: column; 
-            /* 하단 정렬을 위해 justify-content를 flex-end로 설정 */
+            /* 하단 정렬 */
             justify-content: flex-end; 
             align-items: center; /* 가로 중앙 정렬 */
-            /* 텍스트 가독성을 위해 하단에만 그라데이션 오버레이 적용 (선택사항) */
-            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+            /* 텍스트 가독성을 위해 하단부만 살짝 어둡게 처리 (투명 그라데이션) */
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 40%);
             pointer-events: none; 
         }
 
@@ -58,16 +58,17 @@
             font-size: 3.75rem; /* 모바일 기준 크기 */
             font-weight: 900;
             text-align: center;
-            /* 요청하신 대로 하단 여백을 기존 1.5rem에서 2.5rem으로 확대 */
+            /* 하단 여백 확보 */
             padding: 0 1rem 2.5rem 1rem; 
             text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.9);
             line-height: 1.2;
+            word-break: keep-all; 
         }
 
         @media (min-width: 768px) { /* 데스크탑에서 폰트 크기 */
             .overlay-text-bottom {
                 font-size: 5.25rem; 
-                padding-bottom: 3.5rem; /* 데스크탑에서는 여백을 더 줌 */
+                padding-bottom: 3.5rem; 
             }
         }
         /* --- --- */
@@ -124,13 +125,15 @@
     <header class="header">
         <a href="#top">
             <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">
-            <h1>고양고속지부 웹진 |<span>총력투쟁특집</span></h1>
+            <h1>고양고속지부 웹진 |<span>총파업특집</span></h1>
         </a>
     </header>
 
     <section class="main-image-section">
+        <!-- 메인 이미지 night.jpg로 변경 -->
         <img src="images/night.jpg" alt="메인 이미지" class="w-full h-auto">
         <div class="main-image-overlay">
+            <!-- 하단 텍스트 추가 (모바일 줄바꿈 적용됨) -->
             <h2 class="overlay-text-bottom">
                 12월 2일<br class="md:hidden"> 야간총회
             </h2>
@@ -140,9 +143,22 @@
     <section class="toc-section">
 
         <h2 class="text-xl font-black text-center mb-6 text-gray-800">전체 기사 목록</h2>
+
+        <!-- 0. 총파업 특보 (최신) -->
+        <a href="./article_251201_1.html">
+            <div class="article-card article-card-new">
+                 <img src="images/psy08.jpg" alt="총파업 특보 썸네일" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>[투쟁 속보] 행신역 선전전과 중식 총회, 뜨거웠던 열기를 용산으로!</h3>
+                    <p>고양고속차량지부, 한 달간의 현장 투쟁 마무리... 12월 2일 용산역 야간총회 총력 결집 호소</p>
+                </div>
+            </div>
+        </a>
         
+        <!-- 1. 신규 통상임금 기사 -->
         <a href="./article_251107_1.html">
-            <div class="article-card article-card-new"> <img src="images/LSA_5.png" alt="통상임금 기사" class="article-thumbnail">
+            <div class="article-card article-card-new"> <!-- 새 기사 강조 클래스 -->
+                 <img src="images/LSA_5.png" alt="통상임금 기사" class="article-thumbnail">
                 <div class="article-content">
                     <h3>[심층기획] 통상임금 ‘시수 꼼수’, 법보다 유리한 단협을 이길 수 없다!</h3>
                     <p>2024년 대법원 판결의 완전한 이행, 사측의 논리 왜곡을 바로잡는다.</p>
@@ -150,6 +166,7 @@
             </div>
         </a>
 
+        <!-- 2. 연재기사 3부작 (메인에서 목록으로 이동) -->
         <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
             <h3 class="text-lg font-bold text-center mb-1 text-gray-700">[연재기사 3부작]</h3>
             <p class="text-center mb-4 text-gray-600 text-sm">단결투쟁, 우리의 권리는 누가 지켜주는가</p>
@@ -178,6 +195,7 @@
             </div>
         </div>
         
+        <!-- 3. 집중기획 3부작 (목록 내 블록) -->
         <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
             <h3 class="text-lg font-bold text-center mb-1 text-gray-700">[집중기획 3부작]</h3>
             <p class="text-center mb-4 text-gray-600 text-sm">KTX-SRT 통합, 더 이상 미룰 수 없는 과제</p>
@@ -206,6 +224,7 @@
             </div>
         </div>
 
+        <!-- 4. '골병'은 운명이 아닙니다 -->
         <a href="./article2.html">
             <div class="article-card">
                  <img src="images/KTX_worker1.png" alt="근골격계 조사 이미지" class="article-thumbnail">
@@ -216,6 +235,7 @@
             </div>
         </a>
 
+        <!-- 5. [특급작전] 그대, 기름때 묻은 손으로 피리를 불어라! -->
         <a href="./article5.html">
             <div class="article-card">
                  <img src="images/plute_man.jpg" alt="플루트 이미지" class="article-thumbnail">
@@ -229,6 +249,7 @@
     
     <footer class="footer">
         <h3>전국철도노동조합 고양고속차량지부</h3>
+        <!-- '독자의 투고' 링크 및 발행인 정보 원복 -->
         <a href="https://naver.me/GQSaxtyC" target="_blank">
             <p>© 2025 전국철도노동조합 고양고속차량지부 all rights reserved &nbsp;&nbsp;|&nbsp;&nbsp; 발행인: 김숭식</p>
             <p class="mt-2 text-sm opacity-80">독자의 투고를 기다립니다.</p>
