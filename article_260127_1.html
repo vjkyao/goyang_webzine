@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사고는 시스템 문제인데, 왜 사람부터 찍는가 | 고양고속지부 웹진</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background-color: #f4f6f8;
+    }
+    .header {
+      background: #ffffff;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px solid #00529b;
+    }
+    .header a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .header-logo { max-width: 150px; height: auto; }
+    .header h1 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #2c3e50;
+      white-space: nowrap;
+    }
+    .header h1 span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-left: 0.25rem;
+      color: #00529b;
+    }
+
+    .article-section {
+      padding: 2rem 1rem;
+      margin-top: 1rem;
+      background-color: white;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .article-section h2 {
+      font-size: 1.6rem;
+      color: #1a3a5f;
+      margin-bottom: 0.5rem;
+      font-weight: 900;
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #5b6775;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      word-break: keep-all;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 0.75rem 0 1.5rem 0;
+      color: #5b6775;
+      font-size: 0.95rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      font-weight: 700;
+      color: #1a3a5f;
+    }
+
+    .lead-box {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #444;
+      margin-bottom: 2rem;
+      padding: 1.25rem;
+      background-color: #f8f9fa;
+      border-left: 5px solid #ffc107;
+      word-break: keep-all;
+    }
+
+    .article-section p {
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 1.15rem;
+      color: #333;
+      text-align: justify;
+      word-break: keep-all;
+    }
+
+    .article-section img.article-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1.5rem 0 1.75rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .subhead {
+      margin: 2.0rem 0 0.85rem 0;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #1a3a5f;
+      border-left: 5px solid #00529b;
+      padding-left: 0.75rem;
+      line-height: 1.35;
+      word-break: keep-all;
+    }
+
+    .punch {
+      font-weight: 900;
+      font-size: 1.08rem;
+      line-height: 1.6;
+      margin: 1.0rem 0 1.25rem 0;
+      padding: 0.9rem 1.0rem;
+      background: #f8f9fa;
+      border-left: 5px solid #00529b;
+      word-break: keep-all;
+    }
+
+    .sign {
+      text-align: right;
+      margin-top: 2rem;
+      font-weight: 700;
+      color: #1a3a5f;
+    }
+
+    .back-to-top {
+      display: block;
+      text-align: center;
+      padding: 0.8rem;
+      background-color: #2c3e50;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+      margin-top: 2rem;
+    }
+    .back-to-top:hover { background-color: #1a3a5f; }
+
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 1rem;
+    }
+    .footer p {
+      margin: 0;
+      font-size: 1rem;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body id="top">
+  <header class="header">
+    <a href="index.html">
+      <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">
+      <h1>고양고속지부 웹진 |<span>신년안전특집호</span></h1>
+    </a>
+  </header>
+
+  <section class="article-section">
+    <h2>사고는 시스템 문제인데, 왜 사람부터 찍는가</h2>
+    <div class="subtitle">운전실 CCTV가 바꾸려는 ‘안전’의 방향을 묻는다</div>
+
+    <div class="meta">
+      <span class="pill">Special</span>
+      <span>2026년 1월 26일</span>
+    </div>
+
+    <img src="images/cctv1.png" alt="운전실 CCTV 관련 이미지" class="article-image">
+
+    <p>사고가 발생할 때마다 같은 질문이 반복된다. 왜 이런 일이 벌어졌는지, 무엇이 부족했는지, 무엇을 고쳐야 하는지를 묻는다. 그러나 철도 안전의 역사에서 답은 늘 분명했다. 안전은 개인의 주의나 각성에 맡겨질 문제가 아니며, 우연에 기대서도 안 된다. 철도 안전은 언제나 구조의 문제였고, 사람이 실수할 수 있다는 사실을 전제로 그 실수가 사고로 이어지지 않도록 설계하는 데서 출발해 왔다. 이 원칙은 이론이 아니라 수많은 사고와 희생을 통해 확인된 결론이었다.</p>
+
+    <p>그런데 지금 국토부가 제시하는 대책은 이 원칙에서 점점 멀어지고 있다. 사고가 발생하면 구조를 고치고 조건을 바꾸는 대신, 사람을 먼저 찍겠다는 방향이다. 안전을 말하지만, 정작 안전을 만들어 온 방식과는 다른 길을 가고 있다.</p>
+
+    <h3 class="subhead">왜 또다시 운전실인가</h3>
+    <img src="images/cctv2.png" alt="운전실 이미지" class="article-image">
+
+    <p>국토부는 운전실 CCTV 설치를 안전 강화와 사후 원인 규명이라는 말로 설명한다. 이미 제도적 근거는 마련되어 있었고, 그동안은 여러 이유로 유예해 왔지만 최근 반복되는 사고와 일부 일탈 사례로 더 이상 미룰 수 없다는 주장이다. 실제로 역 구내에서 크고 작은 사고들이 발생해 왔고, 일부 기관사의 부주의한 행위가 시민 촬영 영상으로 공개된 사례도 있었다. 국토부는 바로 이런 사례를 근거로 든다. 아무 조치도 하지 않는 것보다는 낫지 않느냐는 논리다.</p>
+
+    <p>그러나 여기서 질문은 바뀌어야 한다. 문제는 안전이냐 아니냐가 아니다. 안전을 어떤 방식으로 만들 것이냐의 문제다. 철도는 처음부터 사람이 조심하면 된다는 생각으로 운영된 산업이 아니다. 사람은 실수할 수 있다는 사실을 인정한 상태에서, 그 실수가 곧바로 사고로 이어지지 않도록 막는 구조를 만들어 왔다. 그렇다면 대책 역시 구조와 조건을 바꾸는 방향이어야 한다. 하지만 지금의 정책은 예방의 언어로 사후 책임 장치를 중심에 올려놓으려 한다. 이 순간 안전의 방향이 바뀐다.</p>
+
+    <h3 class="subhead">사고는 기록이 아니라 구조로 막는다</h3>
+    <img src="images/cctv3.png" alt="안전 구조 이미지" class="article-image">
+
+    <p>우리는 이미 알고 있다. 구의역 사고도, 청도 사고도 CCTV가 없어서 발생한 사고가 아니었다. 인력 구조, 작업 방식, 시간 압박, 설비와 시스템의 결함이 복합적으로 작동한 결과였다. 그렇다면 묻지 않을 수 없다. 운전실에 카메라가 있었다면 그 사고들은 막을 수 있었는가.</p>
+
+    <p>사고는 기록의 양으로 줄어들지 않는다. CCTV와 보고서를 아무리 늘려도 사고는 사라지지 않는다. 사고는 사람이 실수하더라도 사고로 이어지지 않도록 구조를 어떤 방향으로 설계하느냐에 따라 줄어든다. 예방은 조건과 시스템의 언어이고, 기록은 사고 이후를 설명하는 언어다. 이 둘을 혼동하기 시작하면 안전은 개선의 문제가 아니라 평가와 책임의 문제가 된다.</p>
+
+    <div class="punch">감시는 주의력을 높이지 않는다. 감시는 결과를 평가할 뿐이다.</div>
+    <div class="punch">사고를 막지 못한 장치는, 사고 이후 반드시 사람을 겨눈다.</div>
+
+    <h3 class="subhead">주의의무는 완전무결을 뜻하지 않는다</h3>
+    <img src="images/cctv4.png" alt="주의의무 관련 이미지" class="article-image">
+
+    <p>국토부는 운전직의 주의력을 강조한다. 다수의 생명을 책임지는 직무인 만큼 높은 집중력이 요구된다는 말이다. 이 말 자체는 부정할 수 없다. 그러나 주의의무는 완전무결을 의미하지 않는다. 두 시간을 운전한다고 가정해 보자. 그 두 시간 동안 단 한 번도 시선이 흔들리지 않고, 단 한 번도 생각이 다른 데로 가지 않는 것이 가능한가. 현실적으로 불가능하다. 사고가 나지 않았기에 문제 되지 않았을 뿐이다.</p>
+
+    <p>만약 그 찰나의 순간에 사고가 발생했고, 그 장면이 영상으로 남아 있다면, 그 순간은 곧바로 부주의로 재구성된다. 그 앞뒤의 조건은 지워지고 결과를 설명하기 위한 장면만 남는다. 그래서 주의의무는 언제든 완전무결 요구로 변질될 위험을 안고 있다. 집중을 요구하는 직무일수록 필요한 것은 감시가 아니라 조건 관리다. 교대, 휴식, 절차, 장비, 업무 설계가 먼저다.</p>
+
+    <h3 class="subhead">예방이라는 이름의 유혹</h3>
+    <img src="images/cctv5.png" alt="예방의 유혹 관련 이미지" class="article-image">
+
+    <p>CCTV가 설치되는 순간, 감시를 예방으로 착각하는 유혹에서 완전히 벗어나기는 어렵다. 사고를 미연에 막는 것이 가장 저렴하고 가장 손쉬운 대책이라는 논리는 언제나 정책을 유혹해 왔다. 그러나 CCTV가 예방의 중심 수단으로 자리 잡기 시작한다면, 그 부작용은 통제하기 어려워진다. 이는 우리가 그동안 경계해 온 상시 감시 체계로 이어질 위험을 내포한다.</p>
+
+    <p>더 큰 문제는 그 다음 단계다. 감시가 충분하지 않다는 이유로, 새로운 기술을 결합하자는 요구가 뒤따르기 쉽다. 기술의 검증보다 적용이 먼저 이루어지고, 그 영향은 나중에 검토되는 방식은 이미 여러 정책에서 반복되어 왔다. 안전 정책만큼은 이런 시행착오의 실험장이 되어서는 안 된다.</p>
+
+    <h3 class="subhead">이 논리는 운전실에서 멈추지 않는다</h3>
+    <img src="images/cctv6.png" alt="확산 논리 이미지" class="article-image">
+
+    <p>이 사안이 운전직에서 시작되었다고 해서, 운전직에만 머무르지는 않는다. 한 번 ‘영상 중심 안전정책’이 정당화되면, 같은 논리는 다른 현장에도 적용된다. 왜냐하면 행정은 늘 형평과 확대 적용의 언어로 움직이기 때문이다.</p>
+
+    <p>운전실에 설치된 장비는 곧바로 비교의 기준이 된다. 어디는 왜 설치했고, 어디는 왜 예외냐는 질문이 뒤따른다. 여기도 안전이 중요하지 않느냐는 요구가 반복된다. 이렇게 형성된 논리는 멈추지 않는다. 운전실에서 시작된 감시는 시험 운전으로, 입출고 작업으로, 정비와 검수 현장으로 옮겨 간다. 그때마다 안전이라는 말은 붙지만, 구조는 바뀌지 않는다.</p>
+
+    <h3 class="subhead">다음은 어디인가</h3>
+    <img src="images/cctv7.png" alt="정비 현장 이미지" class="article-image">
+
+    <p>고속차량 정비와 검수는 위험을 미리 발견하고 걸러내는 안전의 최전선이다. 그 현장의 핵심은 영상에 찍히는 동작이 아니라 숙련된 판단이다. 이상 징후를 찾고, 원인을 추적하고, 위험을 선제적으로 차단하는 능력은 경험과 집중에서 나온다. 영상이 평가와 책임의 기준으로 중심에 서게 되면, 현장은 달라질 수밖에 없다. 노동자는 잘 고치는 방향보다 찍히지 않는 방향으로 움직이기 시작한다.</p>
+
+    <p>판단은 위축되고, 필요할 때 과감한 결정을 내리지 않게 된다. 그 결과는 안전이 아니라 침묵이다.</p>
+
+    <h3 class="subhead">우리는 무엇을 반대하는가</h3>
+    <img src="images/cctv8.png" alt="결론 이미지" class="article-image">
+
+    <p>우리는 안전을 반대하지 않는다. 우리는 구조를 대신하는 감시에 반대한다. 사고는 시스템의 문제인데, 왜 사람부터 찍는가. 이 질문에 답하지 못한 채 카메라만 늘리는 정책은 안전을 강화하는 것이 아니라 안전의 방향을 바꾸는 일이다.</p>
+
+    <p class="sign">
+      2026년 1월 26일<br>
+      전국철도노동조합 고양고속차량지부
+    </p>
+
+    <a href="index.html" class="back-to-top">목차로 돌아가기</a>
+  </section>
+
+  <footer class="footer">
+    <h3>전국철도노동조합 고양고속차량지부</h3>
+    <p>© 2026 전국철도노동조합 고양고속차량지부 all rights reserved</p>
+  </footer>
+</body>
+</html>
