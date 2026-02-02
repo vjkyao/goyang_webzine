@@ -44,28 +44,24 @@
             inset: 0; 
             display: flex;
             flex-direction: column; 
-            /* 하단 정렬 */
             justify-content: flex-end; 
-            align-items: center; /* 가로 중앙 정렬 */
-            /* 텍스트 가독성을 위해 하단부만 살짝 어둡게 처리 (투명 그라데이션) */
+            align-items: center; 
             background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 40%);
             pointer-events: none; 
         }
 
-        /* 하단 텍스트 스타일 */
         .overlay-text-bottom {
             color: white;
-            font-size: 3.75rem; /* 모바일 기준 크기 */
+            font-size: 3.75rem;
             font-weight: 900;
             text-align: center;
-            /* 하단 여백 확보 */
             padding: 0 1rem 2.5rem 1rem; 
             text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.9);
             line-height: 1.2;
             word-break: keep-all; 
         }
 
-        @media (min-width: 768px) { /* 데스크탑에서 폰트 크기 */
+        @media (min-width: 768px) {
             .overlay-text-bottom {
                 font-size: 5.25rem; 
                 padding-bottom: 3.5rem; 
@@ -103,6 +99,31 @@
             font-size: 0.9rem; color: #555; line-height: 1.5; display: -webkit-box;
             -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
         }
+
+        /* =========================
+           [추가] 국토부의 한심한 세트메뉴 (2개 접시) 애니메이션 블록
+           - 기존 양식(연재기사/집중기획 3부작)과 동일한 박스 스타일
+           - 클릭 시 두 접시 모두 날아가고, 선택한 기사로 이동
+        ========================= */
+        .setmenu-wrap { position: relative; overflow: hidden; }
+        .setmenu-grid { position: relative; z-index: 2; }
+        .setmenu-item { user-select: none; -webkit-tap-highlight-color: transparent; }
+        .setmenu-item img { will-change: transform, opacity; }
+        .setmenu-fly .setmenu-item.left  { animation: flyLeft  0.72s ease-in forwards; }
+        .setmenu-fly .setmenu-item.right { animation: flyRight 0.72s ease-in forwards; }
+
+        @keyframes flyLeft {
+            0%   { transform: translate3d(0,0,0) rotate(0deg) scale(1); opacity: 1; filter: blur(0); }
+            45%  { transform: translate3d(-10px,-8px,0) rotate(-6deg) scale(1.03); opacity: 1; }
+            100% { transform: translate3d(-120vw,-40vh,0) rotate(-28deg) scale(0.92); opacity: 0; filter: blur(1px); }
+        }
+        @keyframes flyRight {
+            0%   { transform: translate3d(0,0,0) rotate(0deg) scale(1); opacity: 1; filter: blur(0); }
+            45%  { transform: translate3d(10px,-8px,0) rotate(6deg) scale(1.03); opacity: 1; }
+            100% { transform: translate3d(120vw,-40vh,0) rotate(28deg) scale(0.92); opacity: 0; filter: blur(1px); }
+        }
+        /* ========================= */
+
         .footer {
             background: #2c3e50; color: white; text-align: center;
             padding: 2.5rem 1rem; margin-top: 2rem;
@@ -131,23 +152,55 @@
 
     <section class="main-image-section">
         <img src="images/ctv0.jpg" alt="메인 이미지" class="w-full h-auto">
-
     </section>
 
     <section class="toc-section">
 
         <h2 class="text-xl font-black text-center mb-6 text-gray-800">전체 기사 목록</h2>
 
-        <!-- [New] 신년안전특집 -->
-        <a href="./article_260127_1.html">
-            <div class="article-card article-card-new">
-                 <img src="images/cctv0.png" alt="신년안전특집 썸네일" class="article-thumbnail">
-                <div class="article-content">
-                    <h3>[신년안전특집] 사고는 시스템 문제인데, 왜 사람부터 찍는가</h3>
-                    <p>운전실 CCTV가 바꾸려는 ‘안전’의 방향을 묻는다</p>
-                </div>
+        <!-- =========================================================
+             [추가] 정중앙 볼드로 [국토부의 한심한 세트메뉴]
+             - 2편(접시 2개): CCTV / 1000명
+             - 클릭하면 "둘 다" 날아가고 이동
+             - 썸네일: images/safe0.png
+             - 배치: 썸네일 위 / 텍스트 아래
+        ========================================================== -->
+        <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200 setmenu-wrap" id="setMenuBlock" data-setmenu>
+            <h3 class="text-lg font-bold text-center mb-4 text-gray-700">[국토부의 한심한 세트메뉴]</h3>
+
+            <div class="grid grid-cols-2 gap-3 md:gap-6 setmenu-grid">
+                <!-- 접시 1: CCTV -->
+                <a href="./article_260127_1.html"
+                   class="block group text-center setmenu-link"
+                   data-target="./article_260127_1.html"
+                   aria-label="CCTV 기사로 이동">
+                    <div class="setmenu-item left">
+                        <img src="images/cctv0.png"
+                             alt="CCTV 썸네일"
+                             class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="mt-2 px-1">
+                            <p class="text-gray-800 text-sm md:text-base font-semibold leading-tight">천리안의 CCTV</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 접시 2: 1000명 -->
+                <a href="./article_260130_1.html"
+                   class="block group text-center setmenu-link"
+                   data-target="./article_260130_1.html"
+                   aria-label="1,000명 기사로 이동">
+                    <div class="setmenu-item right">
+                        <img src="images/safe0.png"
+                             alt="1,000명 썸네일"
+                             class="w-full h-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                        <div class="mt-2 px-1">
+                            <p class="text-gray-800 text-sm md:text-base font-semibold leading-tight">1,000명 양병썰</p>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </a>
+        </div>
+        <!-- ========================================================= -->
 
         <!-- [New] 임협인준특보 1 -->
         <a href="./article_260106_1.html">
@@ -185,7 +238,7 @@
         <!-- [New] 총파업 투쟁속보 1 -->
         <a href="./article_251218_1.html">
             <div class="article-card">
-                 <img src="images/STR_6.jpg" alt="총파업 투쟁속보 1 썸네일" class="article-thumbnail">
+                 <img src="images/STR_1.png" alt="총파업 투쟁속보 1 썸네일" class="article-thumbnail">
                 <div class="article-content">
                     <h3>[총파업 투쟁속보 1] 90%라는 기만적 꼼수, 철도 노동자의 자존심으로 박살 냅시다!</h3>
                     <p>100% 약속을 파기한 기재부의 비겁한 지연 전술, 총력 투쟁으로 응징합시다</p>
@@ -228,7 +281,7 @@
 
         <!-- 1. 신규 통상임금 기사 -->
         <a href="./article_251107_1.html">
-            <div class="article-card"> <!-- 새 기사 강조 클래스 제거 -->
+            <div class="article-card">
                  <img src="images/LSA_5.png" alt="통상임금 기사" class="article-thumbnail">
                 <div class="article-content">
                     <h3>[심층기획] 통상임금 ‘시수 꼼수’, 법보다 유리한 단협을 이길 수 없다!</h3>
@@ -299,11 +352,50 @@
 
     <footer class="footer">
         <h3>전국철도노동조합 고양고속차량지부</h3>
-        <!-- '독자의 투고' 링크 및 발행인 정보 원복 -->
         <a href="https://naver.me/GQSaxtyC" target="_blank">
             <p>© 2026 전국철도노동조합 고양고속차량지부 all rights reserved &nbsp;&nbsp;|&nbsp;&nbsp; 발행인: 김숭식</p>
             <p class="mt-2 text-sm opacity-80">독자의 투고를 기다립니다.</p>
         </a>
     </footer>
+
+    <!-- =========================================================
+         [추가] 세트메뉴 클릭 동작 + 리셋
+         - 어떤 접시를 클릭하든: 두 접시 모두 날아감
+         - 애니메이션 끝나기 직전에: 클릭한 링크로 이동
+         - 뒤로가기/목차로 복귀(pageshow) 시: 자동 리셋(메뉴 다시 보이도록)
+    ========================================================== -->
+    <script>
+        (function () {
+            const block = document.getElementById('setMenuBlock');
+            if (!block) return;
+
+            const links = block.querySelectorAll('.setmenu-link');
+            let isRunning = false;
+
+            function resetSetMenu() {
+                block.classList.remove('setmenu-fly');
+                isRunning = false;
+            }
+
+            // 뒤로가기/앞으로가기(BFCache 복원 포함)에서 UI가 사라지지 않도록 리셋
+            window.addEventListener('pageshow', resetSetMenu);
+
+            links.forEach((a) => {
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (isRunning) return;
+                    isRunning = true;
+
+                    const target = a.getAttribute('data-target') || a.getAttribute('href') || './';
+                    block.classList.add('setmenu-fly');
+
+                    // 애니메이션(0.72s)과 타이밍을 맞춤
+                    window.setTimeout(() => {
+                        window.location.href = target;
+                    }, 680);
+                }, { passive: false });
+            });
+        })();
+    </script>
 </body>
 </html>
