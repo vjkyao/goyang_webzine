@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMU의 시대, 우리는 무엇을 바꿔야 하는가 | 고양고속지부 웹진</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background-color: #f4f6f8;
+    }
+    .header {
+      background: #ffffff;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px solid #00529b;
+    }
+    .header a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .header-logo { max-width: 150px; height: auto; }
+    .header h1 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #2c3e50;
+      white-space: nowrap;
+    }
+    .header h1 span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-left: 0.25rem;
+      color: #00529b;
+    }
+
+    .article-section {
+      padding: 2rem 1rem;
+      margin-top: 1rem;
+      background-color: white;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .article-section h2 {
+      font-size: 1.6rem;
+      color: #1a3a5f;
+      margin-bottom: 0.5rem;
+      font-weight: 900;
+      line-height: 1.3;
+      word-break: keep-all;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #5b6775;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      word-break: keep-all;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 0.75rem 0 1.5rem 0;
+      color: #5b6775;
+      font-size: 0.95rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      font-weight: 700;
+      color: #1a3a5f;
+    }
+
+    .article-section p {
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 1.15rem;
+      color: #333;
+      text-align: justify;
+      word-break: keep-all;
+    }
+
+    .article-section img.article-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1.5rem 0 1.75rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .subhead {
+      margin: 2.0rem 0 0.85rem 0;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #1a3a5f;
+      border-left: 5px solid #00529b;
+      padding-left: 0.75rem;
+      line-height: 1.35;
+      word-break: keep-all;
+    }
+
+    .emphasis {
+      font-size: 1.04rem;
+      line-height: 1.65;
+      font-weight: 800;
+      margin: 1.25rem 0;
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    .closing-verse {
+      margin: 1.5rem 0 1.25rem 0;
+      padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+      background: #f8f9fa;
+      border-left: 5px solid #00529b;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      font-weight: 700;
+      color: #1a3a5f;
+      word-break: keep-all;
+    }
+
+    .back-to-top {
+      display: block;
+      text-align: center;
+      padding: 0.8rem;
+      background-color: #2c3e50;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+      margin-top: 2rem;
+    }
+    .back-to-top:hover { background-color: #1a3a5f; }
+
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 1rem;
+    }
+    .footer p {
+      margin: 0;
+      font-size: 1rem;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body id="top">
+  <script src="components/header.js"></script>
+
+  <section class="article-section">
+    <h2>EMU의 시대, 우리는 무엇을 바꿔야 하는가</h2>
+    <div class="subtitle">기술의 변화는 차량만 바꾸지 않는다. 노동의 기준과 책임의 무게까지 바꾼다</div>
+
+    <div class="meta">
+      <span class="pill">기획</span>
+      <span>2026년 4월 24일</span>
+    </div>
+
+    <img src="images/EMU01.png" alt="EMU 도입 관련 이미지 1" class="article-image">
+
+    <p>고속철도 현장에 새로운 차종이 들어온다는 말은 얼핏 들으면 단순한 차량 교체처럼 들립니다. 그러나 현장에서 일하는 노동자의 눈으로 보면 이야기는 전혀 다릅니다. 그것은 차량만의 변화가 아니라 정비 방식의 변화이고, 교육훈련 방식의 변화이며, 인력 운영의 변화이고, 결국에는 노동의 질서 자체가 다시 짜이는 문제이기 때문입니다. 지금 우리 앞에 다가온 전기동차(Electric Multiple Unit, EMU)의 시대가 바로 그렇습니다.</p>
+
+    <p>새로운 기술은 늘 더 효율적이고, 더 정교하고, 더 편리하다는 말과 함께 들어옵니다. 사용자는 언제나 기술을 진보의 언어로 설명합니다. 실제로도 기술의 발전이 필요한 경우는 분명히 있습니다. 문제는 그 다음입니다. 그 효율이 누구에게 돌아가는가, 그 변화의 비용은 누가 감당하는가, 그리고 기술 변화 이후 남겨진 노동은 과연 더 나아지는가 하는 질문은 늘 뒤로 밀려납니다. 철도도 예외가 아닙니다. EMU 도입은 차량의 변화이지만, 동시에 고양고속차량지부 현장 노동이 앞으로 어떤 방향으로 재편될 것인가를 가늠하게 하는 신호이기도 합니다.</p>
+
+    <h3 class="subhead">차량이 바뀌는 것이 아니라, 정비의 질서가 바뀌고 있습니다</h3>
+    <img src="images/EMU02.png" alt="EMU 도입 관련 이미지 2" class="article-image">
+
+    <p>지금 고양 현장이 맞이하고 있는 변화의 핵심은 단순한 신차 배치가 아닙니다. 공사 물량과 에스알(SR) 물량을 포함한 EMU 도입은 앞으로의 정비물량, 배속기 운영, 검수 방식, 교육 체계, 시설 개량 문제를 한꺼번에 끌고 들어옵니다. 더구나 기존 로템 유지보수 계약 물량까지 철도공사 정비체계로 이관되는 흐름까지 겹치면, 고양고속차량지부는 그야말로 고속철도차량 정비체계 변화의 중심에 서게 됩니다.</p>
+
+    <p>문제는 새로운 차량이 들어온다고 해서 현장의 정비체계가 저절로 정리되지 않는다는 점입니다. 지금까지 고속차량 정비는 전기, 기계, 차체 등 파트별 분업과 숙련을 바탕으로 굴러가 왔습니다. 그런데 EMU는 그 특성상 통합 검수와 통합적 판단을 훨씬 더 강하게 요구합니다. 기존 파트별 검수체계와 새로운 통합 검수체계가 한동안 함께 존재하게 되면, 현장에서는 누가 어떤 범위를 맡을 것인지, 어느 시점에 어느 팀의 책임이 되는지, 기존 주기·일상 인력은 어떻게 재배치될 것인지와 같은 문제가 연쇄적으로 발생할 수밖에 없습니다.</p>
+
+    <p>결국 EMU 도입은 새로운 차량을 배우는 문제를 넘어, 우리가 지금까지 익숙하게 일해 왔던 방식 전체를 흔드는 변화입니다. 정비의 흐름이 바뀌고, 교육의 순서가 바뀌고, 현장 인력의 경계가 바뀌며, 그 과정에서 노동강도와 책임의 무게도 함께 다시 배분됩니다. 그러므로 이 문제를 "신차 들어오면 배우면 되는 것 아니냐"는 식으로 가볍게 볼 수는 없습니다.</p>
+
+    <h3 class="subhead">기술의 발전은 왜 늘 사람을 더 바쁘게 만드는가</h3>
+    <img src="images/EMU03.png" alt="EMU 도입 관련 이미지 3" class="article-image">
+
+    <p>바로 여기서 우리는 EMU 문제를 더 넓은 기술 변화의 흐름 속에서 볼 필요가 있습니다. 왜냐하면 지금 현장에서 벌어지는 일은 철도만의 특수한 사례가 아니라, 이미 다른 산업에서 반복되어 온 기술 도입의 전형적인 경로와 닮아 있기 때문입니다.</p>
+
+    <p>기술은 흔히 사람의 일을 덜어준다고 말합니다. 그러나 실제 현장에서 반복해서 확인된 것은, 기술이 일의 양을 단순히 줄이는 것이 아니라 <strong>일의 형태를 바꾸고, 남은 사람의 책임을 압축한다</strong>는 사실이었습니다. 일이 쉬워지는 것이 아니라, 일상적인 반복노동의 일부가 기계로 넘어간 자리에 더 넓은 감시, 더 높은 집중, 더 무거운 최종 책임이 인간에게 남게 되는 것입니다.</p>
+
+    <p>예를 들어 정수장과 같은 공공 인프라 영역을 보더라도, 감시 제어 및 데이터 수집(Supervisory Control And Data Acquisition, SCADA) 시스템의 확대는 소규모 설비를 대형화·집중화하고, 실시간 제어와 계측을 통해 적은 인원으로 넓은 범위를 관리하는 방향으로 진행되어 왔습니다. 겉으로 보기에는 사람이 현장을 일일이 뛰어다니지 않아도 되고, 화면을 통해 더 많은 정보를 한 번에 볼 수 있으니 더 편해진 것처럼 보일 수 있습니다. 그러나 실제 노동은 그렇게 단순하지 않습니다. 상시적으로 화면과 경보를 감시해야 하고, 수많은 자동화 장치에 비례하는 각종 오동작과 거짓 경보 등 숱한 비정상 상황을 즉시 판단해야 합니다. 평상시에는 "버튼만 누르면 되는 일"처럼 폄하되지만, 정작 사고가 나면 기계는 책임을 지지 않습니다. 결국 남아 있는 소수 인력이 판단하고, 조치하고, 설명하고, 나아가 책임까지 져야 합니다.</p>
+
+    <p>석유화학 설비나 발전소의 분산제어시스템(Distributed Control System, DCS)도 크게 다르지 않습니다. 제어실의 화면은 더 정교해지고, 자동화는 더 촘촘해질수록 평상시 인원은 줄어듭니다. 그러나 남아 있는 노동자는 더 넓은 범위를 한꺼번에 감시해야 하고, 이상 징후가 발생하면 짧은 시간 안에 복합적인 계통을 동시에 판단해야 합니다. 자동화가 확대될수록 단순 반복노동은 줄어들 수 있지만, 남는 노동은 오히려 더 고도의 집중력과 더 큰 책임을 요구합니다. 사용자는 이 노동을 흔히 "모니터만 보는 일", "클릭 몇 번 하는 일"처럼 가볍게 말하지만, 실제로는 시스템 전체가 일탈하는 순간 모든 부담이 그 자리의 노동자에게 쏠리는 구조입니다.</p>
+
+    <p>이것이 중요한 이유는, 우리가 앞으로 철도에서 마주하게 될 미래 역시 크게 다르지 않을 가능성이 높기 때문입니다.</p>
+
+    <h3 class="subhead">더 적은 인원, 더 넓은 범위, 더 무거운 책임. 이것이 자동화 이후의 노동입니다</h3>
+    <img src="images/EMU04.png" alt="EMU 도입 관련 이미지 4" class="article-image">
+
+    <p>철도에서는 오랫동안 "그래도 최종 점검과 수리는 결국 인간의 영역"이라는 말이 일종의 안도처럼 받아들여져 왔습니다. 물론 지금 이 순간에도 그 말에는 일정한 진실이 있습니다. 고장의 원인 분석, 실제 수리, 예외 상황에 대한 판단, 계통 간 상호작용의 해석은 여전히 인간의 경험과 숙련에 크게 기대고 있습니다. 그러나 바로 그렇기 때문에 더 조심해야 합니다.</p>
+
+    <p>기술은 처음부터 인간을 완전히 대체하는 방식으로 들어오지 않습니다. 오히려 그 반대입니다. 먼저 업무를 세분화하고, 매뉴얼화하고, 체크리스트화하고, 데이터화합니다. 그리고 그다음 단계에서 일부 판단과 일부 감시, 일부 진단을 자동화해 갑니다. 이 과정에서 사용자 입장에서는 "사람을 완전히 없애지 않아도 더 적은 인원으로 더 넓은 범위를 관리할 수 있는 구조"가 만들어집니다. 다시 말해, 노동자가 사라지지 않더라도 노동자의 숫자는 줄고, 남아 있는 사람의 책임 범위는 더 커질 수 있습니다.</p>
+
+    <p>철도도 결국 그 방향으로 압박받을 가능성이 높습니다. 상태기반 유지보수(Condition Based Maintenance, CBM), 예지정비(Predictive Maintenance), 통합 진단 시스템, 원격 모니터링, 인공지능(AI) 기반 분석 지원 같은 기술은 모두 더 적은 인원으로 더 넓은 차량과 더 많은 데이터를 다루는 방향으로 작동하기 쉽습니다. 그러면 사용자는 정원 확대보다 효율화를 먼저 이야기하게 되고, 현장에서는 "예전보다 사람이 덜 필요하지 않느냐"는 논리가 슬며시 고개를 듭니다.</p>
+
+    <p>그러나 여기에는 기술이 결코 해결하지 못하는 본질적인 한계가 있습니다. 기계와 알고리즘은 오류를 낼 수 있어도 책임을 지지 않습니다. 자동화는 신호를 주고, 경고를 띄우고, 데이터를 정리할 수는 있지만, 사고가 발생했을 때 누가 판단했고 왜 놓쳤는지, 왜 대응이 늦었는지에 대한 책임은 결국 인간에게 돌아옵니다. 다시 말해, 자동화가 늘어날수록 노동자가 사라지는 것이 아니라, <strong>줄어든 노동자에게 더 무거운 책임과 더 큰 처벌 가능성이 집중되는 구조</strong>가 강화될 수 있습니다. 이것이 바로 우리가 지금 기술 변화 앞에서 가장 경계해야 할 지점입니다.</p>
+
+    <h3 class="subhead">EMU 시대의 쟁점은 기술이 아니라 조건입니다</h3>
+    <img src="images/EMU05.png" alt="EMU 도입 관련 이미지 5" class="article-image">
+
+    <p>그렇기 때문에 EMU 도입에 대한 우리의 대응은 단순한 기술 적응 차원에 머물러서는 안 됩니다. 중요한 것은 새 차를 받아들이느냐 마느냐가 아니라, 그 변화가 어떤 조건 위에서 진행되느냐입니다.</p>
+
+    <p>이미 현장에서는 인력 공백, 정원 미확보, 교육훈련의 부족, 매뉴얼 정비와 보수품 확보 문제, 시험기와 설비 부족, 교대인력 증가에 따른 숙소와 후생복지시설 문제, 검수선과 정비고 개량에 따른 노동환경 변화가 함께 제기되고 있습니다. 이 가운데 어느 하나라도 빠지면 기술 도입의 부담은 고스란히 현장 노동자 개인의 숙련과 헌신으로 메워질 수밖에 없습니다. 사용자는 그것을 두고 "현장이 잘 극복했다"고 말할지 모르지만, 노동자의 입장에서 보면 그것은 기술 적응이 아니라 조건 없는 버티기일 뿐입니다.</p>
+
+    <div class="emphasis"><strong>EMU 도입에 따른 정원 확보, 교육훈련의 제도화, 숙소와 복지시설 확충,<br>매뉴얼과 보수품·시험장비 확보, 검수체계 재정비가 반드시 함께 가야 합니다.</strong></div>
+
+    <h3 class="subhead">우리는 러다이트가 아니라, 기술의 조건을 바꾸려는 사람들입니다</h3>
+    <img src="images/EMU06.png" alt="EMU 도입 관련 이미지 6" class="article-image">
+
+    <p>그렇다면 노동조합은 무엇을 해야 하겠습니까. 해답은 막연한 기술 거부에 있지 않습니다. 신기술을 무조건 부정하는 것은 현실적이지도 않고, 실제로 가능하지도 않습니다. 그러나 그렇다고 사용자가 정한 방식대로 기술을 그대로 받아들이는 것 역시 노동조합의 길일 수는 없습니다. 노동조합이 해야 할 일은 기술의 도입을 멈추는 것이 아니라, <strong>기술이 어떤 조건 아래 들어올 것인지에 개입하는 것</strong>입니다.</p>
+
+    <p>정원이 먼저 확보되어야 하고, 교육훈련은 개인의 희생이 아니라 노동시간 안에서 보장되어야 하며, 자동화로 생긴 효율은 인력감축이 아니라 노동시간 단축과 안전인력 보강, 복지시설 확충으로 환원되어야 합니다. 감시와 데이터 수집이 확대된다면 그 범위와 목적, 평가와 징계에 미치는 영향을 노동조합이 분명히 통제해야 합니다. 자동화가 확대될수록 인간의 최종 책임이 더 무거워진다면, 그에 상응하는 권한과 인력, 휴식과 교육도 함께 보장되어야 합니다.</p>
+
+    <p>결국 문제는 기술이 아니라 힘의 관계입니다. 어떤 기술도 저절로 노동자를 지켜주지 않습니다. 기준을 세우지 않으면 기술은 사용자의 효율 논리로만 작동합니다. 그러나 노동조합이 개입하면 기술은 다른 방식으로도 쓰일 수 있습니다. 노동강도를 낮추고, 사고를 줄이고, 숙련을 지원하며, 더 인간다운 노동을 만드는 방향으로도 재설계할 수 있습니다. EMU 시대에 우리가 바꾸어야 할 것은 기계 그 자체가 아니라, 기술 변화 앞에서 노동이 밀리지 않도록 만드는 기준과 질서입니다.</p>
+
+    <h3 class="subhead">미래는 이미 들어오고 있습니다. 이제 필요한 것은 두려움이 아니라 기준입니다</h3>
+    <img src="images/EMU07.png" alt="EMU 도입 관련 이미지 7" class="article-image">
+
+    <p>EMU의 시대는 시작일 뿐입니다. 그 뒤에는 더 많은 자동화, 더 많은 데이터, 더 많은 감시, 더 많은 효율화 요구가 밀려올 것입니다. 사용자는 그것을 시대의 흐름이라고 부를 것이고, 노동자에게는 적응을 요구할 것입니다. 그러나 미래는 기계가 결정하지 않습니다. 그 미래가 누구의 논리로 설계되느냐에 따라 완전히 달라집니다.</p>
+
+    <p>효율의 이름으로 인력을 줄이고 책임을 몰아주는 미래도 있을 수 있고, 기술 발전의 성과를 안전과 휴식, 교육과 인간다운 노동으로 돌리는 미래도 있을 수 있습니다. 우리가 침묵하면 전자는 너무 쉽게 현실이 될 것입니다. 그러나 우리가 기준을 세우고 조건을 요구한다면, 적어도 기술 변화가 노동자의 희생 위에서만 굴러가도록 내버려 두지는 않을 수 있습니다.</p>
+
+    <div class="closing-verse">
+      EMU 시대에 우리가 물어야 할 질문은 단순합니다.<br>
+      새로운 기술이 들어오느냐가 아니라,<br>
+      그 기술이 <strong>누구를 위해</strong>, <strong>어떤 조건으로</strong>, <strong>누구의 책임 위에</strong> 작동하느냐는 것입니다.<br><br>
+      그리고 그 질문에 가장 먼저 답해야 할 곳이 바로,<br>
+      지금 변화의 한복판에 서 있는 우리 고양고속차량지부 현장입니다.
+    </div>
+
+    <a href="index.html" class="back-to-top">목차로 돌아가기</a>
+  </section>
+
+  <script src="components/footer.js"></script>
+</body>
+</html>
