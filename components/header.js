@@ -28,7 +28,7 @@
     '<header class="header">',
     '  <a href="index.html">',
     '    <img src="images/logo.png" alt="전국철도노동조합 로고" class="header-logo">',
-    '    <h1>고양고속지부 웹진 <span>| 신년안전특집</span></h1>',
+    '    <h1>고양고속지부 웹진 <span>| 신춘특집</span></h1>',
     '  </a>',
     '</header>'
   ].join('\n');
