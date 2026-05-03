@@ -153,13 +153,140 @@
 <body id="top">
     <script src="components/header.js"></script>
 
-    <section class="main-image-section">
-        <img src="images/518_0.jpg" alt="메인 이미지" class="w-full h-auto">
+    <!-- 무한루프 슬라이더: 클론 방식 (마지막→처음 역방향 없음) -->
+    <section class="main-image-section" id="mainSlider" style="overflow:hidden;position:relative;cursor:grab;user-select:none;">
+        <div id="sliderTrack" style="display:flex;will-change:transform;">
+            <!-- 클론: 마지막 장(mayday_7) -->
+            <img src="images/mayday_7.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <!-- 실제 슬라이드 0~7 -->
+            <img src="images/mayday_0.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <img src="images/mayday_1.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <img src="images/mayday_2.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <img src="images/mayday_3.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <img src="images/mayday_4.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <img src="images/mayday_5.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <img src="images/mayday_6.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <img src="images/mayday_7.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+            <!-- 클론: 첫 장(mayday_0) -->
+            <img src="images/mayday_0.jpg" alt="" style="width:100%;flex:0 0 100%;display:block;pointer-events:none;">
+        </div>
     </section>
+    <script>
+    (function(){
+        /* 구조: [clone_last] [0] [1] [2] [3] [4] [5] [6] [7] [clone_first]
+           인덱스:     0        1   2   3   4   5   6   7   8       9
+           실제 슬라이드는 1~8, 표시 인덱스 기준
+        */
+        var REAL = 8;          // 실제 슬라이드 수
+        var HOLD = 2000;       // 홀딩 시간(ms)
+        var TRANS = 350;       // 전환 시간(ms)
+        var pos = 1;           // 현재 track 인덱스 (1~8이 실제)
+        var timer = null;
+        var dragging = false;
+        var startX = 0, diffX = 0;
+        var locked = false;
+
+        var track = document.getElementById('sliderTrack');
+        var slider = document.getElementById('mainSlider');
+
+        function setPos(idx, animate) {
+            track.style.transition = animate
+                ? 'transform ' + (TRANS/1000) + 's cubic-bezier(0.4,0,0.2,1)'
+                : 'none';
+            track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+        }
+
+        /* 전환 끝나면 클론 위치에서 실제 위치로 순간이동 */
+        track.addEventListener('transitionend', function() {
+            if (pos === 0) {
+                pos = REAL;
+                setPos(pos, false);
+            } else if (pos === REAL + 1) {
+                pos = 1;
+                setPos(pos, false);
+            }
+            locked = false;
+        });
+
+        function goNext() {
+            if (locked) return;
+            locked = true;
+            pos++;
+            setPos(pos, true);
+        }
+        function goPrev() {
+            if (locked) return;
+            locked = true;
+            pos--;
+            setPos(pos, true);
+        }
+
+        function startAuto() {
+            clearInterval(timer);
+            timer = setInterval(goNext, HOLD + TRANS);
+        }
+        function stopAuto() { clearInterval(timer); }
+
+        /* 터치 */
+        slider.addEventListener('touchstart', function(e) {
+            stopAuto();
+            startX = e.touches[0].clientX;
+            diffX = 0;
+        }, {passive: true});
+
+        slider.addEventListener('touchmove', function(e) {
+            diffX = e.touches[0].clientX - startX;
+        }, {passive: true});
+
+        slider.addEventListener('touchend', function() {
+            if (Math.abs(diffX) > 40) {
+                diffX < 0 ? goNext() : goPrev();
+            }
+            startAuto();
+        }, {passive: true});
+
+        /* 마우스 드래그 */
+        slider.addEventListener('mousedown', function(e) {
+            stopAuto();
+            dragging = true;
+            startX = e.clientX;
+            diffX = 0;
+            slider.style.cursor = 'grabbing';
+        });
+        window.addEventListener('mousemove', function(e) {
+            if (!dragging) return;
+            diffX = e.clientX - startX;
+        });
+        window.addEventListener('mouseup', function() {
+            if (!dragging) return;
+            dragging = false;
+            slider.style.cursor = 'grab';
+            if (Math.abs(diffX) > 40) {
+                diffX < 0 ? goNext() : goPrev();
+            }
+            startAuto();
+        });
+
+        /* 초기화: 애니메이션 없이 첫 실제 슬라이드(인덱스 1)로 */
+        setPos(pos, false);
+        startAuto();
+    })();
+    </script>
 
     <section class="toc-section">
 
         <h2 class="text-xl font-black text-center mb-6 text-gray-800">전체 기사 목록</h2>
+
+        <!-- [NEW] 헌재기각 기사 — 260502 -->
+        <a href="./article_260502_1.html">
+            <div class="article-card article-card-new">
+                <img src="images/legal_0.png" alt="헌재기각 기사 썸네일" class="article-thumbnail">
+                <div class="article-content">
+                    <h3>[Special] 헌재는 왜 군 대체인력 투입의 위헌 여부를 끝내 판단하지 않았나</h3>
+                    <p>"행정소송부터 하라", "이미 끝난 일이다"라는 말이 파업 현장에서 왜 또 다른 문턱이 되는지 살펴본다</p>
+                </div>
+            </div>
+        </a>
 
         <!-- [NEW] 신춘특집 기획기사 — EMU -->
         <a href="./article_260424_1.html">
